@@ -2,8 +2,10 @@ package main
 
 import "net/http"
 
-func probe() error {
-	http.Get()
+// TODO: generate from openapi.json
+const defaultServerURL = "https://www.freepublicapis.com/api/"
 
-	return nil
+func probe() error {
+	_, err := http.Get(defaultServerURL + "random")
+	return err
 }
