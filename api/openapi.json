@@ -6,10 +6,10 @@
   },
   "servers": [
     {
-      "url": "https://www.freepublicapis.com/api/"
+      "url": "https://www.freepublicapis.com/api"
     }
   ],
   "paths": {
-    "/": {}
+    "/random": {}
   }
 }
