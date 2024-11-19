@@ -1,0 +1,56 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/random
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 383
+        uncompressed: false
+        body: "{\"id\":214,\"emoji\":\"\U0001F31F\",\"title\":\"Affirmation Generator API\",\"description\":\"This API provides inspirational affirmations to boost positivity and self-esteem. Users can retrieve random affirmations to enhance their mental wellness and motivation.\",\"documentation\":\"https://www.affirmations.dev/\",\"methods\":1,\"health\":95,\"source\":\"https://freepublicapis.com/affirmation-generator-api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "383"
+            Content-Type:
+                - application/json
+            Date:
+                - Tue, 19 Nov 2024 17:11:11 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::xgzwk-1732036270841-58008d6b31e2
+        status: 200 OK
+        code: 200
+        duration: 949.265542ms
