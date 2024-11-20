@@ -1,0 +1,56 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/random
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 454
+        uncompressed: false
+        body: "{\"id\":253,\"emoji\":\"\U0001F4DA\",\"title\":\"eLife Sciences API\",\"description\":\"The eLife Sciences API provides access to various resources related to scientific articles, annotations, reports, and more. It allows users to retrieve, search, and manage scholarly content, emphasizing open access and public data sharing.\",\"documentation\":\"https://api.elifesciences.org/documentation/\",\"methods\":1,\"health\":66,\"source\":\"https://freepublicapis.com/elife-sciences-api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "454"
+            Content-Type:
+                - application/json
+            Date:
+                - Wed, 20 Nov 2024 15:11:18 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::bljjb-1732115477792-a384e3827066
+        status: 200 OK
+        code: 200
+        duration: 1.301777833s
