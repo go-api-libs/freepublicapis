@@ -10,6 +10,100 @@
     }
   ],
   "paths": {
-    "/random": {}
+    "/random": {
+      "get": {
+        "operationId": "GetRandom",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/APIInfoResponse"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "APIInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 38
+          },
+          "emoji": {
+            "type": "string",
+            "example": "📄"
+          },
+          "title": {
+            "type": "string",
+            "example": "EmojiHub"
+          },
+          "description": {
+            "type": "string",
+            "example": "Get random emojis or access the entire emoji database by category or group. Easily retrieve html codes to use in web applications."
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://github.com/cheatsnake/emojihub"
+          },
+          "methods": {
+            "type": "integer",
+            "example": 3
+          },
+          "health": {
+            "type": "integer",
+            "example": 25
+          },
+          "source": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://freepublicapis.com/emojihub"
+          }
+        },
+        "required": [
+          "id",
+          "emoji",
+          "title",
+          "description",
+          "documentation",
+          "methods",
+          "health",
+          "source"
+        ],
+        "example": {
+          "id": 38,
+          "emoji": "📄",
+          "title": "EmojiHub",
+          "description": "Get random emojis or access the entire emoji database by category or group. Easily retrieve html codes to use in web applications.",
+          "documentation": "https://github.com/cheatsnake/emojihub",
+          "methods": 3,
+          "health": 25,
+          "source": "https://freepublicapis.com/emojihub"
+        }
+      }
+    },
+    "responses": {
+      "APIInfoResponse": {
+        "description": "Returns information about a single API",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/APIInfo"
+            },
+            "example": {
+              "id": 38,
+              "emoji": "📄",
+              "title": "EmojiHub",
+              "description": "Get random emojis or access the entire emoji database by category or group. Easily retrieve html codes to use in web applications.",
+              "documentation": "https://github.com/cheatsnake/emojihub",
+              "methods": 3,
+              "health": 25,
+              "source": "https://freepublicapis.com/emojihub"
+            }
+          }
+        }
+      }
+    }
   }
 }
