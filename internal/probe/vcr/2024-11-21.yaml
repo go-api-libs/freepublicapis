@@ -1,0 +1,56 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/random
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 414
+        uncompressed: false
+        body: "{\"id\":27,\"emoji\":\"\U0001F17F️\",\"title\":\"Parkhaus Basel API\",\"description\":\"Provides minute-by-minute occupancy data for public parking garages in Basel, Switzerland, sourced from the RSS feed of the Basel parking guidance system.\",\"documentation\":\"https://data.bs.ch/explore/dataset/100088/information/?disjunctive.title&sort=published\",\"methods\":1,\"health\":90,\"source\":\"https://freepublicapis.com/parkhaus-basel-api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "414"
+            Content-Type:
+                - application/json
+            Date:
+                - Wed, 20 Nov 2024 23:59:34 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::wdbcd-1732147174227-f927b9f45882
+        status: 200 OK
+        code: 200
+        duration: 1.0096925s
