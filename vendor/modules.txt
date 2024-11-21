@@ -1,3 +1,11 @@
+# github.com/go-json-experiment/json v0.0.0-20241120174627-2c9e0bd24f64
+## explicit; go 1.23
+github.com/go-json-experiment/json
+github.com/go-json-experiment/json/internal
+github.com/go-json-experiment/json/internal/jsonflags
+github.com/go-json-experiment/json/internal/jsonopts
+github.com/go-json-experiment/json/internal/jsonwire
+github.com/go-json-experiment/json/jsontext
 # github.com/kr/pretty v0.3.1
 ## explicit; go 1.12
 # gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
