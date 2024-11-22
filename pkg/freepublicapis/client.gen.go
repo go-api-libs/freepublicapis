@@ -81,15 +81,3 @@ func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 		return nil, api.NewErrUnknownStatusCode(rsp)
 	}
 }
-
-// APIInfo defines a model
-type APIInfo struct {
-	ID            int     `json:"id"`
-	Emoji         string  `json:"emoji"`
-	Title         string  `json:"title"`
-	Description   string  `json:"description"`
-	Documentation url.URL `json:"documentation"`
-	Methods       int     `json:"methods"`
-	Health        int     `json:"health"`
-	Source        url.URL `json:"source"`
-}
