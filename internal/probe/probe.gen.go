@@ -17,7 +17,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer r.Stop() // Ensure recorder is saved once we're done
+	defer func() {
+		// Ensure recorder is saved once we're done
+		if err := r.Stop(); err != nil {
+			log.Fatal(err)
+		}
+	}()
 
 	if err := probe(); err != nil {
 		log.Fatal(err)
