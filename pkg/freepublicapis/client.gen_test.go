@@ -29,7 +29,7 @@ func TestClient_Error(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	t.Run("Do", func(t testing.T) {
+	t.Run("Do", func(t *testing.T) {
 		testErr := errors.New("test error")
 		http.DefaultClient.Transport = &testRoundTripper{err: testErr}
 
