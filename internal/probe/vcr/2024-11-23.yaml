@@ -1,0 +1,56 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/random
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 422
+        uncompressed: false
+        body: "{\"id\":15,\"emoji\":\"\U0001F3F0\",\"title\":\"Disney API\",\"description\":\"GET only API for Disney characters information. No authentication required. Provides endpoints to filter characters, get all characters, and get details about one character. Available in REST and GraphQL. Includes schemas for character data.\",\"documentation\":\"https://disneyapi.dev/docs/\",\"methods\":3,\"health\":76,\"source\":\"https://freepublicapis.com/disney-api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "422"
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 22 Nov 2024 23:25:41 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - cdg1::iad1::kph4q-1732317940263-e9c5c4a74a77
+        status: 200 OK
+        code: 200
+        duration: 995.687375ms
