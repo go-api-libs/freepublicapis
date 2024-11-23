@@ -19,6 +19,27 @@
           }
         }
       }
+    },
+    "/apis/{path}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer",
+            "example": 275
+          }
+        }
+      ],
+      "get": {
+        "operationId": "GetApis275",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/APIInfoResponse"
+          }
+        }
+      }
     }
   },
   "components": {
