@@ -33,7 +33,7 @@
         }
       ],
       "get": {
-        "operationId": "GetApis275",
+        "operationId": "GetAPI",
         "responses": {
           "200": {
             "$ref": "#/components/responses/APIInfoResponse"
