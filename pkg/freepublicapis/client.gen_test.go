@@ -13,6 +13,7 @@ import (
 
 	"github.com/go-api-libs/api"
 	"github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
+	"gopkg.in/dnaeon/go-vcr.v3/recorder"
 )
 
 type testRoundTripper struct {
@@ -81,5 +82,44 @@ func TestClient_Error(t *testing.T) {
 				t.Fatalf("want: %v, got: %v", errDecode, err)
 			}
 		})
+	})
+}
+
+func replay(t *testing.T, cassette string) {
+	t.Helper()
+
+	r, err := recorder.NewWithOptions(&recorder.Options{
+		CassetteName:       cassette,
+		Mode:               recorder.ModeReplayOnly,
+		RealTransport:      http.DefaultTransport,
+		SkipRequestLatency: true,
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+	t.Cleanup(func() {
+		_ = r.Stop()
+	})
+
+	http.DefaultClient.Transport = r
+}
+
+func TestClient_VCR(t *testing.T) {
+	ctx := context.Background()
+
+	c, err := freepublicapis.NewClient()
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	t.Run("2024-11-23", func(t *testing.T) {
+		replay(t, "../../internal/probe/vcr/2024-11-23")
+
+		res, err := c.GetRandom(ctx)
+		if err != nil {
+			t.Fatal(err)
+		} else if res == nil {
+			t.Fatal("result is nil")
+		}
 	})
 }
