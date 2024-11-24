@@ -54,3 +54,56 @@ interactions:
         status: 200 OK
         code: 200
         duration: 995.687375ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis/275
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 564
+        uncompressed: false
+        body: "{\"id\":275,\"emoji\":\"\U0001F92F\",\"title\":\"Free Public APIs API\",\"description\":\"FreePublicAPIs now has a free public API! The Free Public APIs API provides up-to-date information on every free public API listed on freepublicapis.com. Perfect for developers, students and hobbyists. It is limited to 1000 requests a day, if you need more, feel free to reach out. Also if you build something with this API, make sure to add it as a showcase project here.\",\"documentation\":\"https://www.freepublicapis.com/api\",\"methods\":3,\"health\":90,\"source\":\"https://freepublicapis.com/api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "564"
+            Content-Type:
+                - application/json
+            Date:
+                - Sat, 23 Nov 2024 01:02:00 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - cdg1::iad1::q6chm-1732323720425-5b64025ba342
+        status: 200 OK
+        code: 200
+        duration: 535.205708ms
