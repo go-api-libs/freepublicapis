@@ -20,7 +20,7 @@
         }
       }
     },
-    "/apis/{path}": {
+    "/apis/{id}": {
       "parameters": [
         {
           "$ref": "#/components/parameters/id"
