@@ -36,6 +36,52 @@ func NewClient() (*Client, error) {
 	return &Client{cli: http.DefaultClient}, nil
 }
 
+// GetAPI defines an operation.
+// GET /apis/{id}
+func (c *Client) GetAPI(ctx context.Context, id string) (*APIInfo, error) {
+	return GetAPI[APIInfo](ctx, c, id)
+}
+
+// GetAPI defines an operation.
+// You can define a custom result to unmarshal the response into.
+// GET /apis/{id}
+func GetAPI[R any](ctx context.Context, c *Client, id string) (*R, error) {
+	u := baseURL.JoinPath("apis", id)
+	req := (&http.Request{
+		Header:     http.Header{},
+		Host:       u.Host,
+		Method:     http.MethodGet,
+		Proto:      "HTTP/1.1",
+		ProtoMajor: 1,
+		ProtoMinor: 1,
+		URL:        u,
+	}).WithContext(ctx)
+
+	rsp, err := c.cli.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer rsp.Body.Close()
+
+	switch rsp.StatusCode {
+	case http.StatusOK:
+		// Returns information about a single API
+		switch rsp.Header.Get("Content-Type") {
+		case "application/json":
+			var out R
+			if err := json.UnmarshalRead(rsp.Body, &out, jsonOpts); err != nil {
+				return nil, api.WrapDecodingError(rsp, err)
+			}
+
+			return &out, nil
+		default:
+			return nil, api.NewErrUnknownContentType(rsp)
+		}
+	default:
+		return nil, api.NewErrUnknownStatusCode(rsp)
+	}
+}
+
 // GetRandom defines an operation.
 // GET /random
 func (c *Client) GetRandom(ctx context.Context) (*APIInfo, error) {
