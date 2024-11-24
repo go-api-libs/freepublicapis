@@ -15,6 +15,59 @@ interactions:
         body: ""
         form: {}
         headers: {}
+        url: https://www.freepublicapis.com/api/random
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 212
+        uncompressed: false
+        body: "{\"id\":102,\"emoji\":\"\U0001F579️\",\"title\":\"Flyff Game API\",\"description\":\"All Game Data from Flyff\",\"documentation\":\"https://api.flyff.com/\",\"methods\":4,\"health\":95,\"source\":\"https://freepublicapis.com/flyff-game-api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "212"
+            Content-Type:
+                - application/json
+            Date:
+                - Sun, 24 Nov 2024 13:44:56 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::5mw79-1732455896298-abd5d3c5613e
+        status: 200 OK
+        code: 200
+        duration: 596.197333ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
         url: https://www.freepublicapis.com/api/apis/275
         method: GET
       response:
@@ -42,7 +95,7 @@ interactions:
             Content-Type:
                 - application/json
             Date:
-                - Sun, 24 Nov 2024 00:08:34 GMT
+                - Sun, 24 Nov 2024 13:44:57 GMT
             Server:
                 - Vercel
             Strict-Transport-Security:
@@ -50,7 +103,7 @@ interactions:
             X-Vercel-Cache:
                 - MISS
             X-Vercel-Id:
-                - fra1::iad1::h7vg4-1732406913744-9a5b251fbe5f
+                - fra1::iad1::9prs2-1732455896825-f0df8c3ecbe2
         status: 200 OK
         code: 200
-        duration: 809.710958ms
+        duration: 495.305625ms

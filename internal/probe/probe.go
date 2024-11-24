@@ -1,7 +1,9 @@
 package main
 
 import (
-	"net/http"
+	"context"
+
+	"github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
 )
 
 // TODO: generate from openapi.json
@@ -11,18 +13,20 @@ import (
 func probe() error {
 	// define http calls here, e.g.: http.Get(defaultServerURL + "my-endpoint")
 
-	// c, err := freepublicapis.NewClient()
-	// if err != nil {
-	// 	return err
-	// }
+	ctx := context.Background()
+	c, err := freepublicapis.NewClient()
+	if err != nil {
+		return err
+	}
 
-	// api, err := c.GetRandom(context.Background())
-	// if err != nil {
-	// 	return err
-	// }
+	if _, err := c.GetRandom(ctx); err != nil {
+		return err
+	}
 
-	// fmt.Printf("API Description: %v\n", api.Description)
+	if _, err := c.GetAPI(ctx, "275"); err != nil {
+		return err
+	}
 
-	_, err := http.Get("https://www.freepublicapis.com/api/apis/275")
-	return err
+	// _, err := http.Get("https://www.freepublicapis.com/api/apis/275")
+	return nil
 }
