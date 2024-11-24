@@ -7,6 +7,7 @@ import (
 	"context"
 	"net/http"
 	"net/url"
+	"strconv"
 
 	"github.com/MarkRosemaker/jsonutil"
 	"github.com/go-api-libs/api"
@@ -36,17 +37,17 @@ func NewClient() (*Client, error) {
 	return &Client{cli: http.DefaultClient}, nil
 }
 
-// GetAPI defines an operation.
-// GET /apis/{id}
-func (c *Client) GetAPI(ctx context.Context, id string) (*APIInfo, error) {
-	return GetAPI[APIInfo](ctx, c, id)
+// GetRandom defines an operation.
+// GET /random
+func (c *Client) GetRandom(ctx context.Context) (*APIInfo, error) {
+	return GetRandom[APIInfo](ctx, c)
 }
 
-// GetAPI defines an operation.
+// GetRandom defines an operation.
 // You can define a custom result to unmarshal the response into.
-// GET /apis/{id}
-func GetAPI[R any](ctx context.Context, c *Client, id string) (*R, error) {
-	u := baseURL.JoinPath("apis", id)
+// GET /random
+func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
+	u := baseURL.JoinPath("/random")
 	req := (&http.Request{
 		Header:     http.Header{},
 		Host:       u.Host,
@@ -82,17 +83,17 @@ func GetAPI[R any](ctx context.Context, c *Client, id string) (*R, error) {
 	}
 }
 
-// GetRandom defines an operation.
-// GET /random
-func (c *Client) GetRandom(ctx context.Context) (*APIInfo, error) {
-	return GetRandom[APIInfo](ctx, c)
+// GetAPI defines an operation.
+// GET /apis/{id}
+func (c *Client) GetAPI(ctx context.Context, id int) (*APIInfo, error) {
+	return GetAPI[APIInfo](ctx, c, id)
 }
 
-// GetRandom defines an operation.
+// GetAPI defines an operation.
 // You can define a custom result to unmarshal the response into.
-// GET /random
-func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
-	u := baseURL.JoinPath("/random")
+// GET /apis/{id}
+func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
+	u := baseURL.JoinPath("apis", strconv.Itoa(id))
 	req := (&http.Request{
 		Header:     http.Header{},
 		Host:       u.Host,

@@ -23,7 +23,7 @@ func probe() error {
 		return err
 	}
 
-	if _, err := c.GetAPI(ctx, "275"); err != nil {
+	if _, err := c.GetAPI(ctx, 275); err != nil {
 		return err
 	}
 
