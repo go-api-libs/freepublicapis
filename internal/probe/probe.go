@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"net/http"
 
 	"github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
 )
@@ -27,6 +28,7 @@ func probe() error {
 		return err
 	}
 
-	// _, err := http.Get("https://www.freepublicapis.com/api/apis/275")
-	return nil
+	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
+	_, err = http.Get("https://www.freepublicapis.com/api/apis?limit=10&sort=best")
+	return err
 }
