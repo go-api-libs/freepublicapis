@@ -1,0 +1,160 @@
+---
+version: 2
+interactions:
+    - id: 0
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/random
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 492
+        uncompressed: false
+        body: "{\"id\":227,\"emoji\":\"\U0001F3CE️\",\"title\":\"Kimi Quotes API\",\"description\":\"The Kimi Quotes API provides access to a collection of quotes from Finnish Formula 1 driver Kimi Räikkönen, including team radio snippets and interview quotes. Users can easily retrieve random quotes to share or browse, enhancing the fan experience with memorable lines from the racing legend.\",\"documentation\":\"https://kimiquotes.pages.dev/\",\"methods\":2,\"health\":93,\"source\":\"https://freepublicapis.com/kimi-quotes-api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "492"
+            Content-Type:
+                - application/json
+            Date:
+                - Wed, 27 Nov 2024 23:09:01 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - cdg1::iad1::dqssz-1732748941198-46a3a6509312
+        status: 200 OK
+        code: 200
+        duration: 857.220333ms
+    - id: 1
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis/275
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: 564
+        uncompressed: false
+        body: "{\"id\":275,\"emoji\":\"\U0001F92F\",\"title\":\"Free Public APIs API\",\"description\":\"FreePublicAPIs now has a free public API! The Free Public APIs API provides up-to-date information on every free public API listed on freepublicapis.com. Perfect for developers, students and hobbyists. It is limited to 1000 requests a day, if you need more, feel free to reach out. Also if you build something with this API, make sure to add it as a showcase project here.\",\"documentation\":\"https://www.freepublicapis.com/api\",\"methods\":3,\"health\":90,\"source\":\"https://freepublicapis.com/api\"}"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Length:
+                - "564"
+            Content-Type:
+                - application/json
+            Date:
+                - Wed, 27 Nov 2024 23:09:02 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - cdg1::iad1::rnxg7-1732748942026-a17216374314
+        status: 200 OK
+        code: 200
+        duration: 513.531042ms
+    - id: 2
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=best
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":191,\"emoji\":\"\U0001F30D\",\"title\":\"IP Geolocation & Currency Converter\",\"description\":\"The JSON IP Geolocation API allows you to determine the geographical location of visitors based on their IP addresses. It provides detailed location data such as country, region, city, and coordinates in a structured JSON format.\",\"documentation\":\"https://www.geoplugin.com/webservices/json\",\"methods\":2,\"health\":100,\"popularity\":1822,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":46,\"source\":\"https://freepublicapis.com/json-ip-geolocation\"},{\"id\":129,\"emoji\":\"\U0001F30D\",\"title\":\"IP Geolocation API\",\"description\":\"This API allows users to retrieve geolocation information from an IP address or domain name. It provides details such as country, city, region, latitude, longitude, and more in a JSON format without requiring an API key.\",\"documentation\":\"https://ip-api.com/docs/api:json\",\"methods\":2,\"health\":100,\"popularity\":2319,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":50,\"source\":\"https://freepublicapis.com/ip-geolocation-api-3\"},{\"id\":321,\"emoji\":\"\U0001F4C5\",\"title\":\"Church Calendar API\",\"description\":\"The Church Calendar API provides access to calendar data for any day, allowing users to retrieve various liturgical celebrations and details. It supports multiple languages and enables specific queries for feast names and calendar descriptions based on the selected calendar system.\",\"documentation\":\"http://calapi.inadiutorium.cz/api-doc\",\"methods\":2,\"health\":98,\"popularity\":335,\"avg_reliability\":93,\"avg_error\":0,\"avg_latency\":46,\"source\":\"https://freepublicapis.com/church-calendar-api\"},{\"id\":228,\"emoji\":\"\U0001F3B6\",\"title\":\"Genrenator API\",\"description\":\"The Genrenator API generates random music genres and genre-related stories based on various fragments of attributes such as instruments and adjectives. It features endpoints for both genre and genre story requests, allowing developers to retrieve unique genre information programmatically.\",\"documentation\":\"https://binaryjazz.us/genrenator-api/\",\"methods\":2,\"health\":95,\"popularity\":296,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":475,\"source\":\"https://freepublicapis.com/genrenator-api\"},{\"id\":256,\"emoji\":\"\U0001F4CA\",\"title\":\"SLA Uptime Calculator\",\"description\":\"The SLA Uptime Calculator API provides calculations for expected downtime based on specified uptime percentages. It supports both simple and complex calculations, allowing users to input downtime durations and receive corresponding SLA uptime percentages. Additionally, it can calculate acceptable downtime for different days of the week.\",\"documentation\":\"https://uptime.is/about#api\",\"methods\":1,\"health\":95,\"popularity\":96,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":243,\"source\":\"https://freepublicapis.com/sla-uptime-calculator\"},{\"id\":335,\"emoji\":\"\U0001F4B5\",\"title\":\"Dólar y Monedas API\",\"description\":\"Este API proporciona información sobre el precio del Dólar Oficial, Dólar Blue, Dólar Bolsa, Dólar CCL, Dólar Mayorista y otras monedas en países de América del Sur como Argentina, Chile, Venezuela y Uruguay. Permite obtener cotizaciones actuales y datos históricos sobre estas divisas importantes.\",\"documentation\":\"https://dolarapi.com/docs\",\"methods\":1,\"health\":95,\"popularity\":84,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":244,\"source\":\"https://freepublicapis.com/dólar-y-monedas-api\"},{\"id\":342,\"emoji\":\"\U0001F310\",\"title\":\"IP Data API\",\"description\":\"ipapi.is provides a comprehensive API for obtaining detailed information on IP addresses, including geolocation, hosting provider data, and detection of VPNs, proxies, and abusive behavior. The API is designed for both developers and businesses, offering a user-friendly interface with a generous free tier for basic usage.\",\"documentation\":\"https://ipapi.is/\",\"methods\":1,\"health\":95,\"popularity\":106,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":140,\"source\":\"https://freepublicapis.com/ip-data-api\"},{\"id\":348,\"emoji\":\"\U0001F4B1\",\"title\":\"Exchange Rate API\",\"description\":\"ExchangeRate-API provides a free and open-access API for real-time currency conversion and exchange rate data without the need for an API key. It supports various currency pairs and allows users to obtain current and historical exchange rates for personal or commercial use, subject to terms of attribution and rate limits.\",\"documentation\":\"https://www.exchangerate-api.com/docs/free\",\"methods\":1,\"health\":95,\"popularity\":244,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":186,\"source\":\"https://freepublicapis.com/exchange-rate-api\"},{\"id\":232,\"emoji\":\"\U0001F4DA\",\"title\":\"Crossref REST API\",\"description\":\"The Crossref REST API allows users to search and retrieve metadata for scholarly works, including DOIs, ISSNs, and funder identifiers. It provides access to various endpoints that expose data on works, journals, funders, and more, facilitating sophisticated searches and integrations for research purposes.\",\"documentation\":\"http://api.crossref.org/swagger-ui/index.html\",\"methods\":1,\"health\":95,\"popularity\":127,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":470,\"source\":\"https://freepublicapis.com/crossref-rest-api\"},{\"id\":288,\"emoji\":\"\U0001F310\",\"title\":\"Real REST API\",\"description\":\"This API is designed to handle your HTTP requests 24/7 for free, supporting various methods like GET, POST, PUT, DELETE, and PATCH. It is ideal for demo projects, testing, learning, or educational purposes, providing a reliable backend to store and retrieve data.\",\"documentation\":\"https://restful-api.dev/\",\"methods\":1,\"health\":95,\"popularity\":97,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":492,\"source\":\"https://freepublicapis.com/real-rest-api\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Wed, 27 Nov 2024 23:09:02 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - cdg1::iad1::rnxg7-1732748942542-7a88f2ec7734
+        status: 200 OK
+        code: 200
+        duration: 531.106625ms
