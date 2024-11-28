@@ -131,14 +131,14 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 
 // ListApis defines an operation.
 // GET /apis
-func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (*APIInfos, error) {
+func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (APIInfos, error) {
 	return ListApis[APIInfos](ctx, c, params)
 }
 
 // ListApis defines an operation.
 // You can define a custom result to unmarshal the response into.
 // GET /apis
-func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (*R, error) {
+func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R, error) {
 	u := baseURL.JoinPath("/apis")
 
 	if params != nil {
@@ -165,9 +165,10 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (*R
 		URL:        u,
 	}).WithContext(ctx)
 
+	var out R
 	rsp, err := c.cli.Do(req)
 	if err != nil {
-		return nil, err
+		return out, err
 	}
 	defer rsp.Body.Close()
 
@@ -176,16 +177,15 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (*R
 		// Returns a list of API information
 		switch rsp.Header.Get("Content-Type") {
 		case "application/json":
-			var out R
 			if err := json.UnmarshalRead(rsp.Body, &out, jsonOpts); err != nil {
-				return nil, api.WrapDecodingError(rsp, err)
+				return out, api.WrapDecodingError(rsp, err)
 			}
 
-			return &out, nil
+			return out, nil
 		default:
-			return nil, api.NewErrUnknownContentType(rsp)
+			return out, api.NewErrUnknownContentType(rsp)
 		}
 	default:
-		return nil, api.NewErrUnknownStatusCode(rsp)
+		return out, api.NewErrUnknownStatusCode(rsp)
 	}
 }
