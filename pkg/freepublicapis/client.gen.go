@@ -131,8 +131,8 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 
 // ListApis defines an operation.
 // GET /apis
-func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (*ListApisOkJSONResponse, error) {
-	return ListApis[ListApisOkJSONResponse](ctx, c, params)
+func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (*APIInfos, error) {
+	return ListApis[APIInfos](ctx, c, params)
 }
 
 // ListApis defines an operation.

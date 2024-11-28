@@ -22,8 +22,8 @@ type SimpleAPIInfo struct {
 	Source        url.URL `json:"source"`
 }
 
-// ListApisOkJSONResponse defines a model
-type ListApisOkJSONResponse []APIInfo
+// APIInfos defines a model
+type APIInfos []APIInfo
 
 // APIInfo defines a model
 type APIInfo struct {

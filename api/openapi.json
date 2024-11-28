@@ -115,7 +115,7 @@
           "source": "https://freepublicapis.com/emojihub"
         }
       },
-      "ListApisOkJSONResponse": {
+      "APIInfos": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/APIInfo"
@@ -231,7 +231,7 @@
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/ListApisOkJSONResponse"
+              "$ref": "#/components/schemas/APIInfos"
             }
           }
         }
