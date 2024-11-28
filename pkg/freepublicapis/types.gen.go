@@ -23,10 +23,10 @@ type SimpleAPIInfo struct {
 }
 
 // ListApisOkJSONResponse defines a model
-type ListApisOkJSONResponse []ListApisOkJSONResponseItems
+type ListApisOkJSONResponse []APIInfo
 
-// ListApisOkJSONResponseItems defines a model
-type ListApisOkJSONResponseItems struct {
+// APIInfo defines a model
+type APIInfo struct {
 	ID             int     `json:"id"`
 	Emoji          string  `json:"emoji"`
 	Title          string  `json:"title"`
