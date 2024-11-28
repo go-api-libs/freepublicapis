@@ -48,7 +48,7 @@
         "operationId": "ListApis",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/ListApisOkResponse"
+            "$ref": "#/components/responses/APIInfosResponse"
           }
         }
       }
@@ -226,7 +226,7 @@
           }
         }
       },
-      "ListApisOkResponse": {
+      "APIInfosResponse": {
         "description": "TODO",
         "content": {
           "application/json": {
