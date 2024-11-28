@@ -42,7 +42,7 @@ func probe() error {
 		return err
 	}
 
-	fmt.Printf("len(*apis): %v\n", len(*apis))
+	fmt.Printf("len(apis): %v\n", len(apis))
 
 	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
 	// _, err = http.Get("https://www.freepublicapis.com/api/apis?limit=10&sort=best")
