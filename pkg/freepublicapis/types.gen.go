@@ -5,6 +5,11 @@ package freepublicapis
 
 import "net/url"
 
+type ListApisParams struct {
+	Limit *int
+	Sort  *string
+}
+
 // APIInfo defines a model
 type APIInfo struct {
 	ID            int     `json:"id"`
@@ -15,4 +20,23 @@ type APIInfo struct {
 	Methods       int     `json:"methods"`
 	Health        int     `json:"health"`
 	Source        url.URL `json:"source"`
+}
+
+// ListApisOkJSONResponse defines a model
+type ListApisOkJSONResponse []ListApisOkJSONResponseItems
+
+// ListApisOkJSONResponseItems defines a model
+type ListApisOkJSONResponseItems struct {
+	ID             int     `json:"id"`
+	Emoji          string  `json:"emoji"`
+	Title          string  `json:"title"`
+	Description    string  `json:"description"`
+	Documentation  url.URL `json:"documentation"`
+	Methods        int     `json:"methods"`
+	Health         int     `json:"health"`
+	Popularity     int     `json:"popularity"`
+	AvgReliability int     `json:"avg_reliability"`
+	AvgError       int     `json:"avg_error"`
+	AvgLatency     int     `json:"avg_latency"`
+	Source         url.URL `json:"source"`
 }

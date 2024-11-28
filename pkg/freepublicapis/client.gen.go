@@ -128,3 +128,64 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 		return nil, api.NewErrUnknownStatusCode(rsp)
 	}
 }
+
+// ListApis defines an operation.
+// GET /apis
+func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (*ListApisOkJSONResponse, error) {
+	return ListApis[ListApisOkJSONResponse](ctx, c, params)
+}
+
+// ListApis defines an operation.
+// You can define a custom result to unmarshal the response into.
+// GET /apis
+func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (*R, error) {
+	u := baseURL.JoinPath("/apis")
+
+	if params != nil {
+		q := make(url.Values, 2)
+
+		if params.Limit != nil {
+			q["limit"] = []string{strconv.Itoa(*params.Limit)}
+		}
+
+		if params.Sort != nil {
+			q["sort"] = []string{*params.Sort}
+		}
+
+		u.RawQuery = q.Encode()
+	}
+
+	req := (&http.Request{
+		Header:     http.Header{},
+		Host:       u.Host,
+		Method:     http.MethodGet,
+		Proto:      "HTTP/1.1",
+		ProtoMajor: 1,
+		ProtoMinor: 1,
+		URL:        u,
+	}).WithContext(ctx)
+
+	rsp, err := c.cli.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer rsp.Body.Close()
+
+	switch rsp.StatusCode {
+	case http.StatusOK:
+		// TODO
+		switch rsp.Header.Get("Content-Type") {
+		case "application/json":
+			var out R
+			if err := json.UnmarshalRead(rsp.Body, &out, jsonOpts); err != nil {
+				return nil, api.WrapDecodingError(rsp, err)
+			}
+
+			return &out, nil
+		default:
+			return nil, api.NewErrUnknownContentType(rsp)
+		}
+	default:
+		return nil, api.NewErrUnknownStatusCode(rsp)
+	}
+}

@@ -34,6 +34,24 @@
           }
         }
       }
+    },
+    "/apis": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/limit"
+        },
+        {
+          "$ref": "#/components/parameters/sort"
+        }
+      ],
+      "get": {
+        "operationId": "ListApis",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/ListApisOkResponse"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -96,6 +114,95 @@
           "health": 25,
           "source": "https://freepublicapis.com/emojihub"
         }
+      },
+      "ListApisOkJSONResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ListApisOkJSONResponseItems"
+        }
+      },
+      "ListApisOkJSONResponseItems": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 191
+          },
+          "emoji": {
+            "type": "string",
+            "example": "🌍"
+          },
+          "title": {
+            "type": "string",
+            "example": "IP Geolocation & Currency Converter"
+          },
+          "description": {
+            "type": "string",
+            "example": "The JSON IP Geolocation API allows you to determine the geographical location of visitors based on their IP addresses. It provides detailed location data such as country, region, city, and coordinates in a structured JSON format."
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://www.geoplugin.com/webservices/json"
+          },
+          "methods": {
+            "type": "integer",
+            "example": 2
+          },
+          "health": {
+            "type": "integer",
+            "example": 100
+          },
+          "popularity": {
+            "type": "integer",
+            "example": 1822
+          },
+          "avg_reliability": {
+            "type": "integer",
+            "example": 100
+          },
+          "avg_error": {
+            "type": "integer",
+            "example": 0
+          },
+          "avg_latency": {
+            "type": "integer",
+            "example": 46
+          },
+          "source": {
+            "type": "string",
+            "format": "uri",
+            "example": "https://freepublicapis.com/json-ip-geolocation"
+          }
+        },
+        "required": [
+          "id",
+          "emoji",
+          "title",
+          "description",
+          "documentation",
+          "methods",
+          "health",
+          "popularity",
+          "avg_reliability",
+          "avg_error",
+          "avg_latency",
+          "source"
+        ],
+        "example": {
+          "id": 191,
+          "emoji": "🌍",
+          "title": "IP Geolocation & Currency Converter",
+          "description": "The JSON IP Geolocation API allows you to determine the geographical location of visitors based on their IP addresses. It provides detailed location data such as country, region, city, and coordinates in a structured JSON format.",
+          "documentation": "https://www.geoplugin.com/webservices/json",
+          "methods": 2,
+          "health": 100,
+          "popularity": 1822,
+          "avg_reliability": 100,
+          "avg_error": 0,
+          "avg_latency": 46,
+          "source": "https://freepublicapis.com/json-ip-geolocation"
+        }
       }
     },
     "responses": {
@@ -118,6 +225,16 @@
             }
           }
         }
+      },
+      "ListApisOkResponse": {
+        "description": "TODO",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ListApisOkJSONResponse"
+            }
+          }
+        }
       }
     },
     "parameters": {
@@ -129,6 +246,24 @@
           "type": "integer",
           "example": 275
         }
+      },
+      "limit": {
+        "name": "limit",
+        "in": "query",
+        "schema": {
+          "type": "integer",
+          "example": 10
+        },
+        "example": 10
+      },
+      "sort": {
+        "name": "sort",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "example": "best"
+        },
+        "example": "best"
       }
     }
   }

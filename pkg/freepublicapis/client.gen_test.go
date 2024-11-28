@@ -16,6 +16,10 @@ import (
 	"gopkg.in/dnaeon/go-vcr.v3/recorder"
 )
 
+func pointerTo[T any](v T) *T {
+	return &v
+}
+
 type testRoundTripper struct {
 	rsp *http.Response
 	err error
@@ -44,6 +48,15 @@ func TestClient_Error(t *testing.T) {
 		}
 
 		if _, err := c.GetAPI(ctx, 275); err == nil {
+			t.Fatal("expected error")
+		} else if !errors.Is(err, testErr) {
+			t.Fatalf("want: %v, got: %v", testErr, err)
+		}
+
+		if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+			Limit: pointerTo(10),
+			Sort:  pointerTo("best"),
+		}); err == nil {
 			t.Fatal("expected error")
 		} else if !errors.Is(err, testErr) {
 			t.Fatalf("want: %v, got: %v", testErr, err)
@@ -124,6 +137,51 @@ func TestClient_Error(t *testing.T) {
 				t.Fatalf("want: %v, got: %v", errDecode, err)
 			}
 		})
+
+		t.Run("ListApis", func(t *testing.T) {
+			// unknown status code
+			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{StatusCode: http.StatusTeapot}}
+
+			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: pointerTo(10),
+				Sort:  pointerTo("best"),
+			}); err == nil {
+				t.Fatal("expected error")
+			} else if !errors.Is(err, api.ErrUnknownStatusCode) {
+				t.Fatalf("want: %v, got: %v", api.ErrUnknownStatusCode, err)
+			}
+
+			// unknown content type
+			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{
+				Header:     http.Header{"Content-Type": []string{"foo"}},
+				StatusCode: http.StatusOK,
+			}}
+
+			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: pointerTo(10),
+				Sort:  pointerTo("best"),
+			}); err == nil {
+				t.Fatal("expected error")
+			} else if !errors.Is(err, api.ErrUnknownContentType) {
+				t.Fatalf("want: %v, got: %v", api.ErrUnknownContentType, err)
+			}
+
+			// decoding error for known content type "application/json"
+			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{
+				Body:       io.NopCloser(strings.NewReader("{")),
+				Header:     http.Header{"Content-Type": []string{"application/json"}},
+				StatusCode: http.StatusOK,
+			}}
+
+			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: pointerTo(10),
+				Sort:  pointerTo("best"),
+			}); err == nil {
+				t.Fatal("expected error")
+			} else if !errors.As(err, &errDecode) {
+				t.Fatalf("want: %v, got: %v", errDecode, err)
+			}
+		})
 	})
 }
 
@@ -176,8 +234,8 @@ func TestClient_VCR(t *testing.T) {
 		}
 	})
 
-	t.Run("2024-11-27", func(t *testing.T) {
-		replay(t, "../../internal/probe/vcr/2024-11-27")
+	t.Run("2024-11-28", func(t *testing.T) {
+		replay(t, "../../internal/probe/vcr/2024-11-28")
 
 		{
 			res, err := c.GetRandom(ctx)
@@ -190,6 +248,18 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.GetAPI(ctx, 275)
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: pointerTo(10),
+				Sort:  pointerTo("best"),
+			})
 			if err != nil {
 				t.Fatal(err)
 			} else if res == nil {
