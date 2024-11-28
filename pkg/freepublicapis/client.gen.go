@@ -39,8 +39,8 @@ func NewClient() (*Client, error) {
 
 // GetRandom defines an operation.
 // GET /random
-func (c *Client) GetRandom(ctx context.Context) (*APIInfo, error) {
-	return GetRandom[APIInfo](ctx, c)
+func (c *Client) GetRandom(ctx context.Context) (*SimpleAPIInfo, error) {
+	return GetRandom[SimpleAPIInfo](ctx, c)
 }
 
 // GetRandom defines an operation.
@@ -85,8 +85,8 @@ func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 
 // GetAPI defines an operation.
 // GET /apis/{id}
-func (c *Client) GetAPI(ctx context.Context, id int) (*APIInfo, error) {
-	return GetAPI[APIInfo](ctx, c, id)
+func (c *Client) GetAPI(ctx context.Context, id int) (*SimpleAPIInfo, error) {
+	return GetAPI[SimpleAPIInfo](ctx, c, id)
 }
 
 // GetAPI defines an operation.

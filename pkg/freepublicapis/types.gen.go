@@ -10,8 +10,8 @@ type ListApisParams struct {
 	Sort  *string
 }
 
-// APIInfo defines a model
-type APIInfo struct {
+// SimpleAPIInfo defines a model
+type SimpleAPIInfo struct {
 	ID            int     `json:"id"`
 	Emoji         string  `json:"emoji"`
 	Title         string  `json:"title"`

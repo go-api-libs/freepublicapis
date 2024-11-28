@@ -15,7 +15,7 @@
         "operationId": "GetRandom",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/APIInfoResponse"
+            "$ref": "#/components/responses/SimpleAPIInfoResponse"
           }
         }
       }
@@ -30,7 +30,7 @@
         "operationId": "GetAPI",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/APIInfoResponse"
+            "$ref": "#/components/responses/SimpleAPIInfoResponse"
           }
         }
       }
@@ -56,7 +56,7 @@
   },
   "components": {
     "schemas": {
-      "APIInfo": {
+      "SimpleAPIInfo": {
         "type": "object",
         "properties": {
           "id": {
@@ -206,12 +206,12 @@
       }
     },
     "responses": {
-      "APIInfoResponse": {
+      "SimpleAPIInfoResponse": {
         "description": "Returns information about a single API",
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/APIInfo"
+              "$ref": "#/components/schemas/SimpleAPIInfo"
             },
             "example": {
               "id": 38,
