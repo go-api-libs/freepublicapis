@@ -207,7 +207,7 @@
     },
     "responses": {
       "SimpleAPIInfoResponse": {
-        "description": "Returns information about a single API",
+        "description": "Returns simple information about a single API",
         "content": {
           "application/json": {
             "schema": {
@@ -227,7 +227,7 @@
         }
       },
       "APIInfosResponse": {
-        "description": "TODO",
+        "description": "Returns a list of API information",
         "content": {
           "application/json": {
             "schema": {

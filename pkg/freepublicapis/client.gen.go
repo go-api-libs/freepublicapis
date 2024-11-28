@@ -66,7 +66,7 @@ func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 
 	switch rsp.StatusCode {
 	case http.StatusOK:
-		// Returns information about a single API
+		// Returns simple information about a single API
 		switch rsp.Header.Get("Content-Type") {
 		case "application/json":
 			var out R
@@ -112,7 +112,7 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 
 	switch rsp.StatusCode {
 	case http.StatusOK:
-		// Returns information about a single API
+		// Returns simple information about a single API
 		switch rsp.Header.Get("Content-Type") {
 		case "application/json":
 			var out R
@@ -173,7 +173,7 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (*R
 
 	switch rsp.StatusCode {
 	case http.StatusOK:
-		// TODO
+		// Returns a list of API information
 		switch rsp.Header.Get("Content-Type") {
 		case "application/json":
 			var out R
