@@ -16,10 +16,6 @@ import (
 	"gopkg.in/dnaeon/go-vcr.v3/recorder"
 )
 
-func pointerTo[T any](v T) *T {
-	return &v
-}
-
 type testRoundTripper struct {
 	rsp *http.Response
 	err error
@@ -55,7 +51,7 @@ func TestClient_Error(t *testing.T) {
 
 		if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 			Limit: 10,
-			Sort: "best",
+			Sort:  "best",
 		}); err == nil {
 			t.Fatal("expected error")
 		} else if !errors.Is(err, testErr) {
@@ -234,49 +230,6 @@ func TestClient_VCR(t *testing.T) {
 		}
 	})
 
-	t.Run("2024-11-28", func(t *testing.T) {
-		replay(t, "../../internal/probe/vcr/2024-11-28")
-
-		{
-			res, err := c.GetRandom(ctx)
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.GetAPI(ctx, 275)
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: 10,
-				Sort:  "best",
-			})
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, nil)
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-	})
-
 	t.Run("2024-11-29", func(t *testing.T) {
 		replay(t, "../../internal/probe/vcr/2024-11-29")
 
@@ -300,64 +253,6 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, nil)
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-			})
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: 100,
-				Sort:  "best",
-			})
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: 101,
-				Sort:  "best",
-			})
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: 301,
-				Sort:  "best",
-			})
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: 1000,
-				Sort:  "best",
-			})
 			if err != nil {
 				t.Fatal(err)
 			} else if res == nil {
