@@ -32,8 +32,16 @@ func probe() error {
 		return err
 	}
 
-	limit := 0
-	sort := ""
+	// TODO:
+	// - page param enum
+	// - by default not pointers but if "" or 0, then it's empty
+	// - pagination
+
+	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
+	limit := 10
+	sort := "best"
+	seen := map[int]bool{}
+
 	apis, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 		Limit: &limit,
 		Sort:  &sort,
@@ -43,8 +51,12 @@ func probe() error {
 	}
 
 	fmt.Printf("len(apis): %v\n", len(apis))
+	for _, api := range apis {
+		seen[api.ID] = true
+	}
 
-	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
+	fmt.Printf("seen: %v\n", len(seen))
+
 	// _, err = http.Get("https://www.freepublicapis.com/api/apis?limit=10&sort=best")
 	// return err
 	return nil
