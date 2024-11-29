@@ -149,7 +149,7 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R,
 		}
 
 		if params.Sort != "" {
-			q["sort"] = []string{params.Sort}
+			q["sort"] = []string{string(params.Sort)}
 		}
 
 		u.RawQuery = q.Encode()

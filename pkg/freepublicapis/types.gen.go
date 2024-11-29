@@ -7,8 +7,9 @@ import "net/url"
 
 type ListApisParams struct {
 	Limit int
-	Sort  string
+	Sort  Sort
 }
+type Sort string
 
 // SimpleAPIInfo defines a model
 type SimpleAPIInfo struct {
