@@ -54,8 +54,8 @@ func TestClient_Error(t *testing.T) {
 		}
 
 		if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-			Limit: pointerTo(10),
-			Sort:  pointerTo("best"),
+			Limit: 10,
+			Sort: "best",
 		}); err == nil {
 			t.Fatal("expected error")
 		} else if !errors.Is(err, testErr) {
@@ -143,8 +143,8 @@ func TestClient_Error(t *testing.T) {
 			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{StatusCode: http.StatusTeapot}}
 
 			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(10),
-				Sort:  pointerTo("best"),
+				Limit: 10,
+				Sort:  "best",
 			}); err == nil {
 				t.Fatal("expected error")
 			} else if !errors.Is(err, api.ErrUnknownStatusCode) {
@@ -158,8 +158,8 @@ func TestClient_Error(t *testing.T) {
 			}}
 
 			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(10),
-				Sort:  pointerTo("best"),
+				Limit: 10,
+				Sort:  "best",
 			}); err == nil {
 				t.Fatal("expected error")
 			} else if !errors.Is(err, api.ErrUnknownContentType) {
@@ -174,8 +174,8 @@ func TestClient_Error(t *testing.T) {
 			}}
 
 			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(10),
-				Sort:  pointerTo("best"),
+				Limit: 10,
+				Sort:  "best",
 			}); err == nil {
 				t.Fatal("expected error")
 			} else if !errors.As(err, &errDecode) {
@@ -257,8 +257,8 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(10),
-				Sort:  pointerTo("best"),
+				Limit: 10,
+				Sort:  "best",
 			})
 			if err != nil {
 				t.Fatal(err)
@@ -269,18 +269,6 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, nil)
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(0),
-				Sort:  pointerTo(""),
-			})
 			if err != nil {
 				t.Fatal(err)
 			} else if res == nil {
@@ -321,29 +309,6 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(0),
-				Sort:  pointerTo(""),
-			})
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, nil)
-			if err != nil {
-				t.Fatal(err)
-			} else if res == nil {
-				t.Fatal("result is nil")
-			}
-		}
-
-		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(100),
-				Sort:  pointerTo("best"),
 			})
 			if err != nil {
 				t.Fatal(err)
@@ -354,8 +319,8 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(101),
-				Sort:  pointerTo("best"),
+				Limit: 100,
+				Sort:  "best",
 			})
 			if err != nil {
 				t.Fatal(err)
@@ -366,8 +331,8 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(301),
-				Sort:  pointerTo("best"),
+				Limit: 101,
+				Sort:  "best",
 			})
 			if err != nil {
 				t.Fatal(err)
@@ -378,8 +343,8 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(1000),
-				Sort:  pointerTo("best"),
+				Limit: 301,
+				Sort:  "best",
 			})
 			if err != nil {
 				t.Fatal(err)
@@ -390,8 +355,20 @@ func TestClient_VCR(t *testing.T) {
 
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-				Limit: pointerTo(10),
-				Sort:  pointerTo("best"),
+				Limit: 1000,
+				Sort:  "best",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "best",
 			})
 			if err != nil {
 				t.Fatal(err)

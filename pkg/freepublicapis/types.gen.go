@@ -6,8 +6,8 @@ package freepublicapis
 import "net/url"
 
 type ListApisParams struct {
-	Limit *int
-	Sort  *string
+	Limit int
+	Sort  string
 }
 
 // SimpleAPIInfo defines a model

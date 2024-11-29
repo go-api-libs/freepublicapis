@@ -144,12 +144,12 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R,
 	if params != nil {
 		q := make(url.Values, 2)
 
-		if params.Limit != nil {
-			q["limit"] = []string{strconv.Itoa(*params.Limit)}
+		if params.Limit != 0 {
+			q["limit"] = []string{strconv.Itoa(params.Limit)}
 		}
 
-		if params.Sort != nil {
-			q["sort"] = []string{*params.Sort}
+		if params.Sort != "" {
+			q["sort"] = []string{params.Sort}
 		}
 
 		u.RawQuery = q.Encode()
