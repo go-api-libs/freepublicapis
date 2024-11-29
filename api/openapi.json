@@ -262,7 +262,13 @@
         "schema": {
           "type": "string",
           "enum": [
-            "best"
+            "best",
+            "new",
+            "fast",
+            "popular",
+            "noerror",
+            "reliable",
+            "all"
           ],
           "example": "best"
         },

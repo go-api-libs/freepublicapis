@@ -209,3 +209,309 @@ interactions:
         status: 200 OK
         code: 200
         duration: 507.342ms
+    - id: 4
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=new
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":388,\"emoji\":\"\U0001F3AE\",\"title\":\"Playstation Store API\",\"description\":\"This API allows users to access game information and related services from the Playstation Store. Users can query details about games, including regional availability, language settings, and various content types.\",\"documentation\":\"https://olegshulyakov.github.io/psn-swagger/?utm_source=chatgpt.com#/Games/GetGame\",\"methods\":1,\"health\":77,\"popularity\":4,\"avg_reliability\":50,\"avg_error\":0,\"avg_latency\":737,\"source\":\"https://freepublicapis.com/playstation-store-api\"},{\"id\":387,\"emoji\":\"\U0001F3B1\",\"title\":\"Magic Eight Ball API\",\"description\":\"The Magic Eight Ball API allows users to receive random fortune-telling responses typically associated with the toy. It's useful for developers looking to add a playful predictive element to their applications or websites.\",\"documentation\":\"https://github.com/abunchofapis/magic-eight-ball\",\"methods\":1,\"health\":95,\"popularity\":28,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":305,\"source\":\"https://freepublicapis.com/magic-eight-ball-api\"},{\"id\":386,\"emoji\":\"\U0001F530\",\"title\":\"BIZ FACTORY\",\"description\":\"BIZ FACTORY is a Telegram group dedicated to sharing paid methods, APIs, tricks, scripts, and coding resources. Members can access various premium tools and information for free. Join to enhance your skills and discover valuable resources.\",\"documentation\":\"https://t.me/+NaATB64x9z4zNTZl\",\"methods\":1,\"health\":80,\"popularity\":21,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":2518,\"source\":\"https://freepublicapis.com/biz-factory\"},{\"id\":385,\"emoji\":\"\U0001F324️\",\"title\":\"Weather Forecast API\",\"description\":\"This API provides real-time weather data, including temperature, humidity, and forecasts for various locations. Users can access detailed meteorological information to integrate into their applications.\",\"documentation\":\"https://www.baguette-radar.com/\",\"methods\":1,\"health\":85,\"popularity\":45,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":1447,\"source\":\"https://freepublicapis.com/weather-forecast-api\"},{\"id\":384,\"emoji\":\"\U0001F511\",\"title\":\"BluTV Authentication API\",\"description\":\"This API handles user authentication for BluTV, allowing users to log in with their credentials or via social media accounts like Facebook and Google. It also provides functionality for password recovery and user registration, enhancing security and user experience.\",\"documentation\":\"https://www.blutv.com/int/giris\",\"methods\":2,\"health\":26,\"popularity\":14,\"avg_reliability\":6,\"avg_error\":100,\"avg_latency\":0,\"source\":\"https://freepublicapis.com/blutv-authentication-api\"},{\"id\":383,\"emoji\":\"\U0001F5FA️\",\"title\":\"IP Address API\",\"description\":\"IpQuery is a versatile API that provides essential information about an IP address, including geolocation data and VPN detection capabilities. It is designed for developers, enabling them to filter and utilize data points critical for enhancing application security and personalization.\",\"documentation\":\"https://ipquery.io\",\"methods\":1,\"health\":90,\"popularity\":25,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":575,\"source\":\"https://freepublicapis.com/ip-address-api\"},{\"id\":382,\"emoji\":\"\U0001F4CA\",\"title\":\"Company Enrich API\",\"description\":\"The Company Enrich API provides businesses with enriched, actionable insights about companies. It offers endpoints for company enrichment, search, and discovering similar companies, enabling users to make data-driven decisions and streamline their prospecting efforts.\",\"documentation\":\"https://docs.companyenrich.com\",\"methods\":1,\"health\":61,\"popularity\":11,\"avg_reliability\":95,\"avg_error\":65,\"avg_latency\":312,\"source\":\"https://freepublicapis.com/company-enrich-api\"},{\"id\":381,\"emoji\":\"\U0001F4B1\",\"title\":\"Kekkai Currency API\",\"description\":\"Kekkai is an open-source API that allows you to collect and save historical currency data from various sources. It supports both cryptocurrencies and fiat currencies, enabling users to create exchange rate charts easily.\",\"documentation\":\"https://kekkai-docs.redume.su\",\"methods\":4,\"health\":85,\"popularity\":175,\"avg_reliability\":92,\"avg_error\":5,\"avg_latency\":644,\"source\":\"https://freepublicapis.com/kekkai-currency-api\"},{\"id\":380,\"emoji\":\"\U0001F6E0️\",\"title\":\"Mock API\",\"description\":\"This API allows users to create a customizable mock API for testing and prototyping. Users can define resources and rules to specify how the API handles requests and responses. It is free and open-source, enabling easy setup for local installations.\",\"documentation\":\"https://jsoning.com/api/\",\"methods\":1,\"health\":95,\"popularity\":76,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":261,\"source\":\"https://freepublicapis.com/mock-api\"},{\"id\":379,\"emoji\":\"\U0001F50D\",\"title\":\"User Data Scraper\",\"description\":\"This API allows users to scrape and retrieve user data from various online sources. It gathers a wide range of user information including names, addresses, phone numbers, and more, which can be utilized for various applications and analytics.\",\"documentation\":\"https://leakcheck.net/api/public?check=example\",\"methods\":1,\"health\":90,\"popularity\":216,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":638,\"source\":\"https://freepublicapis.com/user-data-scraper\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 29 Nov 2024 02:44:34 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::t5twv-1732848273641-9644e5130652
+        status: 200 OK
+        code: 200
+        duration: 539.388833ms
+    - id: 5
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=fast
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":191,\"emoji\":\"\U0001F30D\",\"title\":\"IP Geolocation & Currency Converter\",\"description\":\"The JSON IP Geolocation API allows you to determine the geographical location of visitors based on their IP addresses. It provides detailed location data such as country, region, city, and coordinates in a structured JSON format.\",\"documentation\":\"https://www.geoplugin.com/webservices/json\",\"methods\":2,\"health\":100,\"popularity\":1844,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":45,\"source\":\"https://freepublicapis.com/json-ip-geolocation\"},{\"id\":321,\"emoji\":\"\U0001F4C5\",\"title\":\"Church Calendar API\",\"description\":\"The Church Calendar API provides access to calendar data for any day, allowing users to retrieve various liturgical celebrations and details. It supports multiple languages and enables specific queries for feast names and calendar descriptions based on the selected calendar system.\",\"documentation\":\"http://calapi.inadiutorium.cz/api-doc\",\"methods\":2,\"health\":98,\"popularity\":339,\"avg_reliability\":93,\"avg_error\":0,\"avg_latency\":46,\"source\":\"https://freepublicapis.com/church-calendar-api\"},{\"id\":129,\"emoji\":\"\U0001F30D\",\"title\":\"IP Geolocation API\",\"description\":\"This API allows users to retrieve geolocation information from an IP address or domain name. It provides details such as country, city, region, latitude, longitude, and more in a JSON format without requiring an API key.\",\"documentation\":\"https://ip-api.com/docs/api:json\",\"methods\":2,\"health\":100,\"popularity\":2340,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":50,\"source\":\"https://freepublicapis.com/ip-geolocation-api-3\"},{\"id\":131,\"emoji\":\"\U0001F6B2\",\"title\":\"CityBikes API\",\"description\":\"API for accessing CityBikes data including network information, station details, and field filtering.\",\"documentation\":\"https://api.citybik.es/v2/\",\"methods\":2,\"health\":70,\"popularity\":329,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":135,\"source\":\"https://freepublicapis.com/citybikes-api\"},{\"id\":342,\"emoji\":\"\U0001F310\",\"title\":\"IP Data API\",\"description\":\"ipapi.is provides a comprehensive API for obtaining detailed information on IP addresses, including geolocation, hosting provider data, and detection of VPNs, proxies, and abusive behavior. The API is designed for both developers and businesses, offering a user-friendly interface with a generous free tier for basic usage.\",\"documentation\":\"https://ipapi.is/\",\"methods\":1,\"health\":95,\"popularity\":111,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":136,\"source\":\"https://freepublicapis.com/ip-data-api\"},{\"id\":305,\"emoji\":\"\U0001F3AE\",\"title\":\"Valorant API\",\"description\":\"The Valorant API provides extensive data related to in-game items, assets, and other game features, sourced directly from the Valorant game files. This API automatically updates with each game patch, ensuring accurate and up-to-date information for developers and fans alike.\",\"documentation\":\"https://dash.valorant-api.com/\",\"methods\":2,\"health\":70,\"popularity\":153,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":146,\"source\":\"https://freepublicapis.com/valorant-api\"},{\"id\":36,\"emoji\":\"\U0001F326️\",\"title\":\"Open Meteo\",\"description\":\"Open-Meteo is an open-source weather API and offers free access for non-commercial use. No API key required. Start using it now!\",\"documentation\":\"https://open-meteo.com/en/docs\",\"methods\":2,\"health\":95,\"popularity\":1286,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":146,\"source\":\"https://freepublicapis.com/open-meteo\"},{\"id\":166,\"emoji\":\"\U0001F4FA\",\"title\":\"TVmaze API\",\"description\":\"Add television information to your own website or app with a fast and clean TV API. Add schedules, show, episode, cast information, ...\",\"documentation\":\"https://www.tvmaze.com/api\",\"methods\":2,\"health\":82,\"popularity\":722,\"avg_reliability\":50,\"avg_error\":0,\"avg_latency\":167,\"source\":\"https://freepublicapis.com/tvmaze-api\"},{\"id\":325,\"emoji\":\"\U0001F409\",\"title\":\"Dragon Ball API\",\"description\":\"The Dragon Ball API provides comprehensive information about characters, transformations, power stats, planets, and locations from the Dragon Ball universe. It allows users to retrieve data through various endpoints for easy integration into applications or services.\",\"documentation\":\"https://web.dragonball-api.com/documentation\",\"methods\":2,\"health\":95,\"popularity\":681,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":172,\"source\":\"https://freepublicapis.com/dragon-ball-api\"},{\"id\":343,\"emoji\":\"\U0001F426\",\"title\":\"Vogelwarte Schweiz\",\"description\":\"Reverse-Engineered Vogel-Datenbank der Schweiz mit verschiedenen Endpoints \",\"documentation\":\"https://www.vogelwarte.ch/\",\"methods\":3,\"health\":86,\"popularity\":50,\"avg_reliability\":66,\"avg_error\":0,\"avg_latency\":177,\"source\":\"https://freepublicapis.com/vogelwarte-schweiz\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 29 Nov 2024 02:44:43 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::z7ff7-1732848282898-6c271da642b7
+        status: 200 OK
+        code: 200
+        duration: 542.801875ms
+    - id: 6
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=popular
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":227,\"emoji\":\"\U0001F3CE️\",\"title\":\"Kimi Quotes API\",\"description\":\"The Kimi Quotes API provides access to a collection of quotes from Finnish Formula 1 driver Kimi Räikkönen, including team radio snippets and interview quotes. Users can easily retrieve random quotes to share or browse, enhancing the fan experience with memorable lines from the racing legend.\",\"documentation\":\"https://kimiquotes.pages.dev/\",\"methods\":2,\"health\":93,\"popularity\":10000000995,\"avg_reliability\":92,\"avg_error\":0,\"avg_latency\":284,\"source\":\"https://freepublicapis.com/kimi-quotes-api\"},{\"id\":162,\"emoji\":\"\U0001F4F0\",\"title\":\"HackerNews API\",\"description\":\"Provides public Hacker News data in near real time. Accessible via Firebase client libraries for Android, iOS, and web. Includes information on stories, comments, jobs, Ask HNs, polls, and users.\",\"documentation\":\"https://github.com/HackerNews/API\",\"methods\":3,\"health\":95,\"popularity\":100001431,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":401,\"source\":\"https://freepublicapis.com/hackernews-api\"},{\"id\":129,\"emoji\":\"\U0001F30D\",\"title\":\"IP Geolocation API\",\"description\":\"This API allows users to retrieve geolocation information from an IP address or domain name. It provides details such as country, city, region, latitude, longitude, and more in a JSON format without requiring an API key.\",\"documentation\":\"https://ip-api.com/docs/api:json\",\"methods\":2,\"health\":100,\"popularity\":2340,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":50,\"source\":\"https://freepublicapis.com/ip-geolocation-api-3\"},{\"id\":69,\"emoji\":\"⚽\",\"title\":\"Free Sports API\",\"description\":\"Provides free JSON sports API for accessing basic sports data, including information on teams, players, events, and more. Offers test API keys, API limits, and upgrade options for premium features.\",\"documentation\":\"https://www.thesportsdb.com/free_sports_api\",\"methods\":5,\"health\":85,\"popularity\":2034,\"avg_reliability\":60,\"avg_error\":0,\"avg_latency\":375,\"source\":\"https://freepublicapis.com/free-sports-api\"},{\"id\":62,\"emoji\":\"⚡️\",\"title\":\"Harry Potter API\",\"description\":\"API providing data on Harry Potter characters and spells. Includes routes for all characters, specific character by ID, Hogwarts students and staff, characters in a house, and all spells.\",\"documentation\":\"https://hp-api.onrender.com/\",\"methods\":4,\"health\":76,\"popularity\":1996,\"avg_reliability\":25,\"avg_error\":0,\"avg_latency\":218,\"source\":\"https://freepublicapis.com/harry-potter-api\"},{\"id\":191,\"emoji\":\"\U0001F30D\",\"title\":\"IP Geolocation & Currency Converter\",\"description\":\"The JSON IP Geolocation API allows you to determine the geographical location of visitors based on their IP addresses. It provides detailed location data such as country, region, city, and coordinates in a structured JSON format.\",\"documentation\":\"https://www.geoplugin.com/webservices/json\",\"methods\":2,\"health\":100,\"popularity\":1844,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":45,\"source\":\"https://freepublicapis.com/json-ip-geolocation\"},{\"id\":68,\"emoji\":\"\U0001F4CA\",\"title\":\"Data USA\",\"description\":\"Browse 47,000+ automated reports, view aggregated data, merge and download data, compare reports\",\"documentation\":\"https://datausa.io/\",\"methods\":1,\"health\":95,\"popularity\":1754,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":184,\"source\":\"https://freepublicapis.com/data-usa\"},{\"id\":121,\"emoji\":\"\U0001F331\",\"title\":\"Air Quality API\",\"description\":\"Pollutants and pollen forecast in 11 km resolution\",\"documentation\":\"https://open-meteo.com/en/docs/air-quality-api\",\"methods\":1,\"health\":95,\"popularity\":1676,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":228,\"source\":\"https://freepublicapis.com/air-quality-api\"},{\"id\":210,\"emoji\":\"\U0001F30D\",\"title\":\"World Bank Data API\",\"description\":\"The World Bank Data API provides access to a wide array of economic, financial, and social data from over 200 countries. It allows developers to integrate World Bank datasets into their applications and services, facilitating data-driven decision-making for research and policy development.\",\"documentation\":\"https://datahelpdesk.worldbank.org/knowledgebase/topics/125589\",\"methods\":1,\"health\":95,\"popularity\":1471,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":414,\"source\":\"https://freepublicapis.com/world-bank-data-api\"},{\"id\":284,\"emoji\":\"⚽\",\"title\":\"Football Data API\",\"description\":\"The Football Data API provides comprehensive access to football (soccer) statistics and information. It includes data on areas, competitions, teams, matches, standings, scorers, and players. Perfect for building sports apps or platforms.\",\"documentation\":\"https://www.football-data.org/documentation/quickstart\",\"methods\":1,\"health\":70,\"popularity\":1428,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":492,\"source\":\"https://freepublicapis.com/football-data-api\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 29 Nov 2024 02:44:49 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::5nbgw-1732848289575-b699a37c7d5c
+        status: 200 OK
+        code: 200
+        duration: 534.335583ms
+    - id: 7
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=noerror
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":233,\"emoji\":\"\U0001F310\",\"title\":\"EC2 Shop API\",\"description\":\"A simple and fast API to get Amazon EC2 instance pricing right from your terminal. Supports filtering and sorting by various attributes like memory, CPU, price, and spot price. Provides up-to-date pricing data for on-demand and spot instances, refreshed every 2.5 minutes.\",\"documentation\":\"https://github.com/yeo/ec2.shop#api-document\",\"methods\":2,\"health\":70,\"popularity\":146,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":463,\"source\":\"https://freepublicapis.com/ec-2-shop\"},{\"id\":352,\"emoji\":\"\U0001F1E6\U0001F1F7\",\"title\":\"ArgentinaDatos API\",\"description\":\"This API provides up-to-date information on various data points from Argentina, including historical exchange rates, financial indices, and public holidays. It enables users to access data in a RESTful manner, making it a valuable resource for developers and analysts interested in Argentine data.\",\"documentation\":\"https://argentinadatos.com/\",\"methods\":1,\"health\":95,\"popularity\":20,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":262,\"source\":\"https://freepublicapis.com/argentinadatos-api\"},{\"id\":295,\"emoji\":\"✈️\",\"title\":\"AviationWeather Data API\",\"description\":\"This API provides machine-to-machine access to aviation weather data, including METARs, TAFs, AIRMETs, and SIGMETs. It enables users to fetch up-to-date weather information for flight planning and operations. The service allows queries for the past 15 days of data and provides cache options for efficient data retrieval.\",\"documentation\":\"https://aviationweather.gov/data/api/\",\"methods\":1,\"health\":65,\"popularity\":159,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":876,\"source\":\"https://freepublicapis.com/aviationweather-data-api\"},{\"id\":60,\"emoji\":\"\U0001F6F0️\",\"title\":\"ISS Current Location\",\"description\":\"Provides the current location of the International Space Station including latitude, longitude, and timestamp. Offers both JSON and JSONP formats for easy access. Users are advised to poll the API no more than once every 5 seconds.\",\"documentation\":\"http://open-notify.org/Open-Notify-API/ISS-Location-Now/\",\"methods\":1,\"health\":85,\"popularity\":467,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":1283,\"source\":\"https://freepublicapis.com/iss-current-location\"},{\"id\":388,\"emoji\":\"\U0001F3AE\",\"title\":\"Playstation Store API\",\"description\":\"This API allows users to access game information and related services from the Playstation Store. Users can query details about games, including regional availability, language settings, and various content types.\",\"documentation\":\"https://olegshulyakov.github.io/psn-swagger/?utm_source=chatgpt.com#/Games/GetGame\",\"methods\":1,\"health\":77,\"popularity\":4,\"avg_reliability\":50,\"avg_error\":0,\"avg_latency\":737,\"source\":\"https://freepublicapis.com/playstation-store-api\"},{\"id\":342,\"emoji\":\"\U0001F310\",\"title\":\"IP Data API\",\"description\":\"ipapi.is provides a comprehensive API for obtaining detailed information on IP addresses, including geolocation, hosting provider data, and detection of VPNs, proxies, and abusive behavior. The API is designed for both developers and businesses, offering a user-friendly interface with a generous free tier for basic usage.\",\"documentation\":\"https://ipapi.is/\",\"methods\":1,\"health\":95,\"popularity\":111,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":136,\"source\":\"https://freepublicapis.com/ip-data-api\"},{\"id\":232,\"emoji\":\"\U0001F4DA\",\"title\":\"Crossref REST API\",\"description\":\"The Crossref REST API allows users to search and retrieve metadata for scholarly works, including DOIs, ISSNs, and funder identifiers. It provides access to various endpoints that expose data on works, journals, funders, and more, facilitating sophisticated searches and integrations for research purposes.\",\"documentation\":\"http://api.crossref.org/swagger-ui/index.html\",\"methods\":1,\"health\":95,\"popularity\":134,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":472,\"source\":\"https://freepublicapis.com/crossref-rest-api\"},{\"id\":288,\"emoji\":\"\U0001F310\",\"title\":\"Real REST API\",\"description\":\"This API is designed to handle your HTTP requests 24/7 for free, supporting various methods like GET, POST, PUT, DELETE, and PATCH. It is ideal for demo projects, testing, learning, or educational purposes, providing a reliable backend to store and retrieve data.\",\"documentation\":\"https://restful-api.dev/\",\"methods\":1,\"health\":90,\"popularity\":101,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":508,\"source\":\"https://freepublicapis.com/real-rest-api\"},{\"id\":348,\"emoji\":\"\U0001F4B1\",\"title\":\"Exchange Rate API\",\"description\":\"ExchangeRate-API provides a free and open-access API for real-time currency conversion and exchange rate data without the need for an API key. It supports various currency pairs and allows users to obtain current and historical exchange rates for personal or commercial use, subject to terms of attribution and rate limits.\",\"documentation\":\"https://www.exchangerate-api.com/docs/free\",\"methods\":1,\"health\":95,\"popularity\":245,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":181,\"source\":\"https://freepublicapis.com/exchange-rate-api\"},{\"id\":331,\"emoji\":\"\U0001F3B4\",\"title\":\"Yugi Limit Regulation API\",\"description\":\"The API provides access to the Yu-Gi-Oh! Forbidden and Limited Lists, also known as banlists, in a JSON format. It includes lists for various formats such as the Trading Card Game (TCG), Official Card Game (OCG), Master Duel, and Rush Duel.\",\"documentation\":\"https://github.com/DawnbrandBots/yaml-yugi-limit-regulation\",\"methods\":6,\"health\":94,\"popularity\":69,\"avg_reliability\":99,\"avg_error\":0,\"avg_latency\":274,\"source\":\"https://freepublicapis.com/yugi-limit-regulation-api\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 29 Nov 2024 02:44:57 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::jgxr7-1732848297455-e6a2e325099a
+        status: 200 OK
+        code: 200
+        duration: 639.497125ms
+    - id: 8
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=reliable
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":385,\"emoji\":\"\U0001F324️\",\"title\":\"Weather Forecast API\",\"description\":\"This API provides real-time weather data, including temperature, humidity, and forecasts for various locations. Users can access detailed meteorological information to integrate into their applications.\",\"documentation\":\"https://www.baguette-radar.com/\",\"methods\":1,\"health\":85,\"popularity\":45,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":1447,\"source\":\"https://freepublicapis.com/weather-forecast-api\"},{\"id\":383,\"emoji\":\"\U0001F5FA️\",\"title\":\"IP Address API\",\"description\":\"IpQuery is a versatile API that provides essential information about an IP address, including geolocation data and VPN detection capabilities. It is designed for developers, enabling them to filter and utilize data points critical for enhancing application security and personalization.\",\"documentation\":\"https://ipquery.io\",\"methods\":1,\"health\":90,\"popularity\":25,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":575,\"source\":\"https://freepublicapis.com/ip-address-api\"},{\"id\":31,\"emoji\":\"\U0001F17F️\",\"title\":\"Parkleitsystem API\",\"description\":\"Provides real-time information on available parking spaces in connected parking garages in cities like Basel, Zurich, Bern, Luzern, St.Gallen, and Zug. Developed by Simon Jenny for the Pebble.Parking-App.\",\"documentation\":\"https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2015/parkleitsystem_api_ch.html\",\"methods\":2,\"health\":80,\"popularity\":73,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":4060,\"source\":\"https://freepublicapis.com/parkleitsystem-api\"},{\"id\":60,\"emoji\":\"\U0001F6F0️\",\"title\":\"ISS Current Location\",\"description\":\"Provides the current location of the International Space Station including latitude, longitude, and timestamp. Offers both JSON and JSONP formats for easy access. Users are advised to poll the API no more than once every 5 seconds.\",\"documentation\":\"http://open-notify.org/Open-Notify-API/ISS-Location-Now/\",\"methods\":1,\"health\":85,\"popularity\":467,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":1283,\"source\":\"https://freepublicapis.com/iss-current-location\"},{\"id\":352,\"emoji\":\"\U0001F1E6\U0001F1F7\",\"title\":\"ArgentinaDatos API\",\"description\":\"This API provides up-to-date information on various data points from Argentina, including historical exchange rates, financial indices, and public holidays. It enables users to access data in a RESTful manner, making it a valuable resource for developers and analysts interested in Argentine data.\",\"documentation\":\"https://argentinadatos.com/\",\"methods\":1,\"health\":95,\"popularity\":20,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":262,\"source\":\"https://freepublicapis.com/argentinadatos-api\"},{\"id\":342,\"emoji\":\"\U0001F310\",\"title\":\"IP Data API\",\"description\":\"ipapi.is provides a comprehensive API for obtaining detailed information on IP addresses, including geolocation, hosting provider data, and detection of VPNs, proxies, and abusive behavior. The API is designed for both developers and businesses, offering a user-friendly interface with a generous free tier for basic usage.\",\"documentation\":\"https://ipapi.is/\",\"methods\":1,\"health\":95,\"popularity\":111,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":136,\"source\":\"https://freepublicapis.com/ip-data-api\"},{\"id\":232,\"emoji\":\"\U0001F4DA\",\"title\":\"Crossref REST API\",\"description\":\"The Crossref REST API allows users to search and retrieve metadata for scholarly works, including DOIs, ISSNs, and funder identifiers. It provides access to various endpoints that expose data on works, journals, funders, and more, facilitating sophisticated searches and integrations for research purposes.\",\"documentation\":\"http://api.crossref.org/swagger-ui/index.html\",\"methods\":1,\"health\":95,\"popularity\":134,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":472,\"source\":\"https://freepublicapis.com/crossref-rest-api\"},{\"id\":288,\"emoji\":\"\U0001F310\",\"title\":\"Real REST API\",\"description\":\"This API is designed to handle your HTTP requests 24/7 for free, supporting various methods like GET, POST, PUT, DELETE, and PATCH. It is ideal for demo projects, testing, learning, or educational purposes, providing a reliable backend to store and retrieve data.\",\"documentation\":\"https://restful-api.dev/\",\"methods\":1,\"health\":90,\"popularity\":101,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":508,\"source\":\"https://freepublicapis.com/real-rest-api\"},{\"id\":348,\"emoji\":\"\U0001F4B1\",\"title\":\"Exchange Rate API\",\"description\":\"ExchangeRate-API provides a free and open-access API for real-time currency conversion and exchange rate data without the need for an API key. It supports various currency pairs and allows users to obtain current and historical exchange rates for personal or commercial use, subject to terms of attribution and rate limits.\",\"documentation\":\"https://www.exchangerate-api.com/docs/free\",\"methods\":1,\"health\":95,\"popularity\":245,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":181,\"source\":\"https://freepublicapis.com/exchange-rate-api\"},{\"id\":386,\"emoji\":\"\U0001F530\",\"title\":\"BIZ FACTORY\",\"description\":\"BIZ FACTORY is a Telegram group dedicated to sharing paid methods, APIs, tricks, scripts, and coding resources. Members can access various premium tools and information for free. Join to enhance your skills and discover valuable resources.\",\"documentation\":\"https://t.me/+NaATB64x9z4zNTZl\",\"methods\":1,\"health\":80,\"popularity\":21,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":2518,\"source\":\"https://freepublicapis.com/biz-factory\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 29 Nov 2024 02:45:02 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::99pdm-1732848302389-562bcf145e8b
+        status: 200 OK
+        code: 200
+        duration: 569.319459ms
+    - id: 9
+      request:
+        proto: HTTP/1.1
+        proto_major: 1
+        proto_minor: 1
+        content_length: 0
+        transfer_encoding: []
+        trailer: {}
+        host: www.freepublicapis.com
+        remote_addr: ""
+        request_uri: ""
+        body: ""
+        form: {}
+        headers: {}
+        url: https://www.freepublicapis.com/api/apis?limit=10&sort=all
+        method: GET
+      response:
+        proto: HTTP/2.0
+        proto_major: 2
+        proto_minor: 0
+        transfer_encoding: []
+        trailer: {}
+        content_length: -1
+        uncompressed: true
+        body: "[{\"id\":220,\"emoji\":\"⚠️\",\"title\":\"404 Error Handler\",\"description\":\"This API is designed to help developers manage and respond to 404 errors on their websites. It provides insights into potential causes and offers solutions for correcting broken links and missing files to improve user experience.\",\"documentation\":\"http://ccdb.hemiola.com/\",\"methods\":1,\"health\":65,\"popularity\":548,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":718,\"source\":\"https://freepublicapis.com/404-error-handler\"},{\"id\":154,\"emoji\":\"\U0001F7E2\",\"title\":\"4chan API\",\"description\":\"4chan's read-only JSON API\",\"documentation\":\"https://github.com/4chan/4chan-API\",\"methods\":3,\"health\":70,\"popularity\":620,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":300,\"source\":\"https://freepublicapis.com/4chan-api\"},{\"id\":294,\"emoji\":\"☁️\",\"title\":\"7Timer Weather API\",\"description\":\"The 7Timer Weather API provides global numerical weather forecasts derived from high-resolution models. Users can access weather data in graphical or machine-readable formats without needing an API key, enabling programmatic access to various meteorological elements.\",\"documentation\":\"https://www.7timer.info/doc.php?lang=en\",\"methods\":1,\"health\":95,\"popularity\":304,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":427,\"source\":\"https://freepublicapis.com/7timer-weather-api\"},{\"id\":378,\"emoji\":\"\U0001F6E0️\",\"title\":\"API Tools\",\"description\":\"API Tools – Access over 30+ REST APIs, all completely free with no usage limits. Explore a wide range of tools designed for everyone, no sign-up or restrictions required!\",\"documentation\":\"https://api.apitools.workers.dev/\",\"methods\":1,\"health\":33,\"popularity\":197,\"avg_reliability\":24,\"avg_error\":75,\"avg_latency\":791,\"source\":\"https://freepublicapis.com/api-tools\"},{\"id\":167,\"emoji\":\"\U0001F575️\",\"title\":\"APIC Agent\",\"description\":\"Free REST API to detect browser, OS, device from user agent string. Provides easy-to-use API to avoid user-agent parsing libraries.\",\"documentation\":\"https://www.apicagent.com/docs\",\"methods\":1,\"health\":95,\"popularity\":137,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":489,\"source\":\"https://freepublicapis.com/apic-agent\"},{\"id\":32,\"emoji\":\"\U0001F30A\",\"title\":\"Aare.guru API\",\"description\":\"Public API for Aare river data including temperature, flow rate, weather forecasts, and more. Non-commercial use allowed with customizable app and version parameters.\",\"documentation\":\"https://aareguru.existenz.ch/\",\"methods\":4,\"health\":88,\"popularity\":507,\"avg_reliability\":75,\"avg_error\":0,\"avg_latency\":180,\"source\":\"https://freepublicapis.com/aareguru-api\"},{\"id\":310,\"emoji\":\"\U0001F3E0\",\"title\":\"Address Lookup Service\",\"description\":\"The Address Lookup Service API provides a means for users to retrieve address records based on input address information. Users can submit both GET and POST requests to search for address details using free-text format inputs, facilitating easy access to relevant address data.\",\"documentation\":\"https://data.gov.hk/en-data/dataset/hk-dpo-als_01-als/resource/210c2cc9-1172-4529-a82b-f10107513e9c\",\"methods\":1,\"health\":60,\"popularity\":107,\"avg_reliability\":0,\"avg_error\":0,\"avg_latency\":1066,\"source\":\"https://freepublicapis.com/address-lookup-service\"},{\"id\":117,\"emoji\":\"\U0001F4AC\",\"title\":\"Advice Slip API\",\"description\":\"Provides random advice slips, advice by ID, and searching advice functionalities. Includes objects for slip, search, and message.\",\"documentation\":\"https://api.adviceslip.com/\",\"methods\":2,\"health\":95,\"popularity\":464,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":299,\"source\":\"https://freepublicapis.com/advice-slip-api\"},{\"id\":350,\"emoji\":\"\U0001F4A1\",\"title\":\"Advice Slip API\",\"description\":\"This API provides random pieces of advice to users, enabling them to receive thoughtful suggestions on various topics. Users can easily retrieve advice slips in a straightforward manner through simple API calls.\",\"documentation\":\"https://api.adviceslip.com/advice/search/try1\",\"methods\":1,\"health\":95,\"popularity\":125,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":354,\"source\":\"https://freepublicapis.com/advice-slip-api-2\"},{\"id\":214,\"emoji\":\"\U0001F31F\",\"title\":\"Affirmation Generator API\",\"description\":\"This API provides inspirational affirmations to boost positivity and self-esteem. Users can retrieve random affirmations to enhance their mental wellness and motivation.\",\"documentation\":\"https://www.affirmations.dev/\",\"methods\":1,\"health\":95,\"popularity\":599,\"avg_reliability\":100,\"avg_error\":0,\"avg_latency\":362,\"source\":\"https://freepublicapis.com/affirmation-generator-api\"}]"
+        headers:
+            Access-Control-Allow-Headers:
+                - Content-Type
+            Access-Control-Allow-Methods:
+                - GET, POST, OPTIONS
+            Access-Control-Allow-Origin:
+                - '*'
+            Age:
+                - "0"
+            Cache-Control:
+                - public, max-age=0, must-revalidate
+            Content-Type:
+                - application/json
+            Date:
+                - Fri, 29 Nov 2024 02:45:10 GMT
+            Server:
+                - Vercel
+            Strict-Transport-Security:
+                - max-age=63072000
+            X-Vercel-Cache:
+                - MISS
+            X-Vercel-Id:
+                - fra1::iad1::glp45-1732848309786-b304701c7fd0
+        status: 200 OK
+        code: 200
+        duration: 528.614833ms

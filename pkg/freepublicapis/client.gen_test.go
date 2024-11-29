@@ -271,5 +271,77 @@ func TestClient_VCR(t *testing.T) {
 				t.Fatal("result is nil")
 			}
 		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "new",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "fast",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "popular",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "noerror",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "reliable",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 10,
+				Sort:  "all",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
 	})
 }

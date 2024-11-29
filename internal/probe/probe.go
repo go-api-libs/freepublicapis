@@ -33,7 +33,6 @@ func probe() error {
 	}
 
 	// TODO:
-	// - by default not pointers but if "" or 0, then it's empty
 	// - page param enum
 	// - pagination
 
