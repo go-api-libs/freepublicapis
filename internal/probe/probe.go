@@ -33,8 +33,8 @@ func probe() error {
 	}
 
 	// TODO:
-	// - page param enum
 	// - by default not pointers but if "" or 0, then it's empty
+	// - page param enum
 	// - pagination
 
 	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
