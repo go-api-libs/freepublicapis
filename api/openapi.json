@@ -262,6 +262,7 @@
         "schema": {
           "type": "string",
           "enum": [
+            "best"
           ],
           "example": "best"
         },
