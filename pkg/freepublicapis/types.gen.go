@@ -12,6 +12,16 @@ type ListApisParams struct {
 
 type Sort string
 
+const (
+	SortBest     Sort = "best"
+	SortNew      Sort = "new"
+	SortFast     Sort = "fast"
+	SortPopular  Sort = "popular"
+	SortNoError  Sort = "noerror"
+	SortReliable Sort = "reliable"
+	SortAll      Sort = "all"
+)
+
 // SimpleAPIInfo defines a model
 type SimpleAPIInfo struct {
 	ID            int     `json:"id"`
