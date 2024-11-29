@@ -28,33 +28,28 @@ func probe() error {
 		return err
 	}
 
+	if _, err := c.GetAPI(ctx, 1); err == nil {
+		return fmt.Errorf("expected error")
+	} else {
+		fmt.Printf("err: %v\n", err)
+	}
+
 	if _, err := c.ListApis(ctx, nil); err != nil {
 		return err
 	}
 
-	// TODO:
-	// - page param enum
-	// - pagination
-
-	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
-	seen := map[int]bool{}
-
-	apis, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+	if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 		Limit: 10,
-		Sort:  "best",
-	})
-	if err != nil {
+		Sort:  freepublicapis.SortBest,
+	}); err != nil {
 		return err
 	}
 
-	fmt.Printf("len(apis): %v\n", len(apis))
-	for _, api := range apis {
-		seen[api.ID] = true
-	}
+	// TODO:
+	// - enable 500 error but ignore content type (not important)
+	// - ReadMe generation
+	// - next APIs
+	// - script that checks previous APIs, generates all 350 APIs
 
-	fmt.Printf("seen: %v\n", len(seen))
-
-	// _, err = http.Get("https://www.freepublicapis.com/api/apis?limit=10&sort=best")
-	// return err
 	return nil
 }
