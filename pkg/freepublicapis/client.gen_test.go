@@ -288,4 +288,47 @@ func TestClient_VCR(t *testing.T) {
 			}
 		}
 	})
+
+	t.Run("2024-11-29", func(t *testing.T) {
+		replay(t, "../../internal/probe/vcr/2024-11-29")
+
+		{
+			res, err := c.GetRandom(ctx)
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.GetAPI(ctx, 275)
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, nil)
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: pointerTo(0),
+				Sort:  pointerTo(""),
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+	})
 }
