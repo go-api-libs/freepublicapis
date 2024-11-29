@@ -38,13 +38,11 @@ func probe() error {
 	// - pagination
 
 	// TODO: you can now add a limit parameter to the 'list all free public APIs' endpoint. You can also sort by: best, new, fast, popular, noerror, reliable, all.
-	limit := 10
-	sort := "best"
 	seen := map[int]bool{}
 
 	apis, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-		Limit: &limit,
-		Sort:  &sort,
+		Limit: 10,
+		Sort:  "best",
 	})
 	if err != nil {
 		return err
