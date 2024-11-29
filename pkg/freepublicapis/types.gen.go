@@ -9,6 +9,7 @@ type ListApisParams struct {
 	Limit int
 	Sort  Sort
 }
+
 type Sort string
 
 // SimpleAPIInfo defines a model
