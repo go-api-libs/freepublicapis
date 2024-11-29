@@ -261,9 +261,10 @@
         "in": "query",
         "schema": {
           "type": "string",
+          "enum": [
+          ],
           "example": "best"
         },
-        "enum": [],
         "example": "best"
       }
     }
