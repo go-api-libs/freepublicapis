@@ -31,6 +31,9 @@
         "responses": {
           "200": {
             "$ref": "#/components/responses/SimpleAPIInfoResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/GetAPIInternalServerErrorResponse"
           }
         }
       }
@@ -233,6 +236,14 @@
             "schema": {
               "$ref": "#/components/schemas/APIInfos"
             }
+          }
+        }
+      },
+      "GetAPIInternalServerErrorResponse": {
+        "description": "TODO",
+        "content": {
+          "text/plain; charset=utf-8": {
+            "example": "Internal Server Error"
           }
         }
       }

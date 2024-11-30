@@ -124,6 +124,9 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 		default:
 			return nil, api.NewErrUnknownContentType(rsp)
 		}
+	case http.StatusInternalServerError:
+		// TODO
+		return nil, api.NewErrStatusCode(rsp)
 	default:
 		return nil, api.NewErrUnknownStatusCode(rsp)
 	}
