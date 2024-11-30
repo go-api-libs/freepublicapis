@@ -31,7 +31,7 @@ func main() {
 
 func record() (*recorder.Recorder, error) {
 	r, err := recorder.NewWithOptions(&recorder.Options{
-		CassetteName:       fmt.Sprintf("internal/probe/vcr/%s", time.Now().Format(time.DateOnly)),
+		CassetteName:       fmt.Sprintf("../../pkg/freepublicapis/vcr/%s", time.Now().Format(time.DateOnly)),
 		Mode:               recorder.ModeReplayWithNewEpisodes,
 		SkipRequestLatency: true,
 		RealTransport:      http.DefaultTransport,

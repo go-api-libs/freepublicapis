@@ -209,7 +209,7 @@ func TestClient_VCR(t *testing.T) {
 	}
 
 	t.Run("2024-11-24", func(t *testing.T) {
-		replay(t, "../../internal/probe/vcr/2024-11-24")
+		replay(t, "vcr/2024-11-24")
 
 		{
 			res, err := c.GetRandom(ctx)
@@ -231,7 +231,7 @@ func TestClient_VCR(t *testing.T) {
 	})
 
 	t.Run("2024-11-29", func(t *testing.T) {
-		replay(t, "../../internal/probe/vcr/2024-11-29")
+		replay(t, "vcr/2024-11-29")
 
 		{
 			res, err := c.GetRandom(ctx)
@@ -366,7 +366,7 @@ func TestClient_VCR(t *testing.T) {
 	})
 
 	t.Run("2024-11-30", func(t *testing.T) {
-		replay(t, "../../internal/probe/vcr/2024-11-30")
+		replay(t, "vcr/2024-11-30")
 
 		{
 			res, err := c.GetRandom(ctx)
@@ -406,6 +406,18 @@ func TestClient_VCR(t *testing.T) {
 		{
 			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 				Limit: 10,
+				Sort:  "best",
+			})
+			if err != nil {
+				t.Fatal(err)
+			} else if res == nil {
+				t.Fatal("result is nil")
+			}
+		}
+
+		{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+				Limit: 1000,
 				Sort:  "best",
 			})
 			if err != nil {
