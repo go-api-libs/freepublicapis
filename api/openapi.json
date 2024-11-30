@@ -33,7 +33,7 @@
             "$ref": "#/components/responses/SimpleAPIInfoResponse"
           },
           "500": {
-            "$ref": "#/components/responses/GetAPIInternalServerErrorResponse"
+            "$ref": "#/components/responses/InternalServerErrorResponse"
           }
         }
       }
@@ -239,8 +239,8 @@
           }
         }
       },
-      "GetAPIInternalServerErrorResponse": {
-        "description": "TODO",
+      "InternalServerErrorResponse": {
+        "description": "The server can't serve the request due to an error",
         "content": {
           "text/plain; charset=utf-8": {
             "example": "Internal Server Error"
