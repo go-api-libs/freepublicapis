@@ -14,6 +14,8 @@ var (
 	// i.e. it has not been defined in the OpenAPI specification
 	// for the status code of the response.
 	ErrUnknownContentType = errors.New("unknown content type")
+	// ErrStatusCode is returned when the status code indicates an error.
+	ErrStatusCode = errors.New("status code indicates an error")
 )
 
 // Error is an error returned by the API client.
@@ -29,18 +31,25 @@ func NewErrUnknownStatusCode(rsp *http.Response) error {
 	return &Error{Response: rsp, Err: ErrUnknownStatusCode}
 }
 
+func NewErrStatusCode(rsp *http.Response) error {
+	return &Error{Response: rsp, Err: ErrStatusCode}
+}
+
 func NewErrUnknownContentType(rsp *http.Response) error {
 	return &Error{Response: rsp, Err: ErrUnknownContentType}
 }
 
 // Error returns the error message.
 func (e *Error) Error() string {
-	if e.Err == ErrUnknownContentType {
+	switch e.Err {
+	case ErrUnknownContentType:
 		return fmt.Sprintf("%s: %v %q", e.Response.Status, e.Err,
 			e.Response.Header.Get("Content-Type"))
+	case ErrStatusCode:
+		return fmt.Sprintf("got %s calling %s", e.Response.Status, e.Response.Request.URL)
+	default:
+		return fmt.Sprintf("%s: %v", e.Response.Status, e.Err)
 	}
-
-	return fmt.Sprintf("%s: %v", e.Response.Status, e.Err)
 }
 
 // Unwrap returns the underlying error.
