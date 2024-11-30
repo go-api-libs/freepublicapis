@@ -46,7 +46,6 @@ func probe() error {
 	}
 
 	// TODO:
-	// - enable 500 error but ignore content type (not important)
 	// - ReadMe generation
 	// - next APIs
 	// - script that checks previous APIs, generates all 350 APIs
