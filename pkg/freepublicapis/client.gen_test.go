@@ -6,7 +6,6 @@ package freepublicapis_test
 import (
 	"context"
 	"errors"
-	"fmt"
 	"io"
 	"net/http"
 	"strings"
@@ -23,10 +22,6 @@ type testRoundTripper struct {
 }
 
 func (t *testRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
-	if t.rsp != nil {
-		t.rsp.Request = req
-		t.rsp.Status = fmt.Sprintf("%d %s", t.rsp.StatusCode, http.StatusText(t.rsp.StatusCode))
-	}
 	return t.rsp, t.err
 }
 
@@ -77,7 +72,7 @@ func TestClient_Error(t *testing.T) {
 				t.Fatalf("want: %v, got: %v", api.ErrUnknownStatusCode, err)
 			}
 
-			// unknown content type
+			// unknown content type for 200 OK
 			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{
 				Header:     http.Header{"Content-Type": []string{"foo"}},
 				StatusCode: http.StatusOK,
@@ -113,19 +108,7 @@ func TestClient_Error(t *testing.T) {
 				t.Fatalf("want: %v, got: %v", api.ErrUnknownStatusCode, err)
 			}
 
-			// unknown content type
-			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{
-				Header:     http.Header{"Content-Type": []string{"foo"}},
-				StatusCode: http.StatusOK,
-			}}
-
-			if _, err := c.GetAPI(ctx, 275); err == nil {
-				t.Fatal("expected error")
-			} else if !errors.Is(err, api.ErrUnknownContentType) {
-				t.Fatalf("want: %v, got: %v", api.ErrUnknownContentType, err)
-			}
-			
-			// unknown content type
+			// unknown content type for 200 OK
 			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{
 				Header:     http.Header{"Content-Type": []string{"foo"}},
 				StatusCode: http.StatusOK,
@@ -164,7 +147,7 @@ func TestClient_Error(t *testing.T) {
 				t.Fatalf("want: %v, got: %v", api.ErrUnknownStatusCode, err)
 			}
 
-			// unknown content type
+			// unknown content type for 200 OK
 			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{
 				Header:     http.Header{"Content-Type": []string{"foo"}},
 				StatusCode: http.StatusOK,
