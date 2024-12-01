@@ -1,5 +1,4 @@
 # 🤯 Free Public APIs API
-
 [![Go Reference](https://pkg.go.dev/badge/github.com/go-api-libs/freepublicapis.svg)](https://pkg.go.dev/github.com/go-api-libs/freepublicapis/pkg/freepublicapis)
 [![Official Documentation](https://img.shields.io/badge/docs-API-blue)](https://www.freepublicapis.com/api)
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-3.1-blue)](/api/openapi.json)
@@ -14,7 +13,7 @@ FreePublicAPIs now has a free public API! The Free Public APIs API provides up-t
 
 To install the library, use the following command:
 
-```bash
+```shell
 go get github.com/go-api-libs/freepublicapis/pkg/freepublicapis
 ```
 
@@ -38,13 +37,14 @@ func main() {
 	}
 
 	ctx := context.Background()
-	randomAPI, err := c.GetRandom(ctx)
+	simpleAPIInfo, err := c.GetRandom(ctx)
 	if err != nil {
 		panic(err)
 	}
 
-	// Use randomAPI
+	// Use simpleAPIInfo object
 }
+
 ```
 
 ### Example 2: Get a Specific API by ID
@@ -65,13 +65,14 @@ func main() {
 	}
 
 	ctx := context.Background()
-	myAPI, err := c.GetAPI(ctx, 275)
+	simpleAPIInfo, err := c.GetAPI(ctx, 275)
 	if err != nil {
 		panic(err)
 	}
 
-	// Use myAPI
+	// Use simpleAPIInfo object
 }
+
 ```
 
 ### Example 3: List APIs with Parameters
@@ -92,24 +93,25 @@ func main() {
 	}
 
 	ctx := context.Background()
-	apis, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
-		Limit: 100,
-		Sort:  freepublicapis.SortBest,
+	apiInfos, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+		Limit: 10,
+		Sort:  "best",
 	})
 	if err != nil {
 		panic(err)
 	}
 
-	// Use the apis
+	// Use apiInfos array
 }
+
 ```
 
 ## Additional Information
 
-- **Go Reference**: The Go reference documentation for this package can be found [here](https://pkg.go.dev/github.com/go-api-libs/freepublicapis/pkg/freepublicapis).
-- **Official Documentation**: The official API documentation is available [here](https://www.freepublicapis.com/api).
-- **OpenAPI Specification**: You can find the OpenAPI specification [here](/api/openapi.json).
-- **Go Report Card**: Check the code quality report [here](https://goreportcard.com/report/github.com/go-api-libs/freepublicapis).
+- [**Go Reference**](https://pkg.go.dev/github.com/go-api-libs/freepublicapis/pkg/freepublicapis): The Go reference documentation for the client package.
+- [**Official Documentation**](https://www.freepublicapis.com/api): The official API documentation.
+- [**OpenAPI Specification**](./api/openapi.json): The OpenAPI 3.1.0 specification.
+- [**Go Report Card**](https://goreportcard.com/report/github.com/go-api-libs/freepublicapis): Check the code quality report.
 
 ## Contributing
 
@@ -118,7 +120,3 @@ If you have any contributions to make, please submit a pull request or open an i
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
-
-
-
