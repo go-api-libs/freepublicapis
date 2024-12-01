@@ -38,15 +38,17 @@ func NewClient() (*Client, error) {
 	return &Client{cli: http.DefaultClient}, nil
 }
 
-// GetRandom - Get a Random API
-// GET /random
+// Get a Random API
+//
+//	GET /random
 func (c *Client) GetRandom(ctx context.Context) (*SimpleAPIInfo, error) {
 	return GetRandom[SimpleAPIInfo](ctx, c)
 }
 
-// GetRandom - Get a Random API
+// Get a Random API
 // You can define a custom result to unmarshal the response into.
-// GET /random
+//
+//	GET /random
 func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 	u := baseURL.JoinPath("/random")
 	req := (&http.Request{
@@ -84,15 +86,17 @@ func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 	}
 }
 
-// GetAPI - Get a Specific API by ID
-// GET /apis/{id}
+// Get a Specific API by ID
+//
+//	GET /apis/{id}
 func (c *Client) GetAPI(ctx context.Context, id int) (*SimpleAPIInfo, error) {
 	return GetAPI[SimpleAPIInfo](ctx, c, id)
 }
 
-// GetAPI - Get a Specific API by ID
+// Get a Specific API by ID
 // You can define a custom result to unmarshal the response into.
-// GET /apis/{id}
+//
+//	GET /apis/{id}
 func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 	u := baseURL.JoinPath("apis", strconv.Itoa(id))
 	req := (&http.Request{
@@ -133,15 +137,17 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 	}
 }
 
-// ListApis - List APIs with Parameters
-// GET /apis
+// List APIs with Parameters
+//
+//	GET /apis
 func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (APIInfos, error) {
 	return ListApis[APIInfos](ctx, c, params)
 }
 
-// ListApis - List APIs with Parameters
+// List APIs with Parameters
 // You can define a custom result to unmarshal the response into.
-// GET /apis
+//
+//	GET /apis
 func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R, error) {
 	u := baseURL.JoinPath("/apis")
 
