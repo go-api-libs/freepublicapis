@@ -38,13 +38,13 @@ func NewClient() (*Client, error) {
 	return &Client{cli: http.DefaultClient}, nil
 }
 
-// GetRandom defines an operation.
+// GetRandom - Get a Random API
 // GET /random
 func (c *Client) GetRandom(ctx context.Context) (*SimpleAPIInfo, error) {
 	return GetRandom[SimpleAPIInfo](ctx, c)
 }
 
-// GetRandom defines an operation.
+// GetRandom - Get a Random API
 // You can define a custom result to unmarshal the response into.
 // GET /random
 func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
@@ -84,13 +84,13 @@ func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 	}
 }
 
-// GetAPI defines an operation.
+// GetAPI - Get a Specific API by ID
 // GET /apis/{id}
 func (c *Client) GetAPI(ctx context.Context, id int) (*SimpleAPIInfo, error) {
 	return GetAPI[SimpleAPIInfo](ctx, c, id)
 }
 
-// GetAPI defines an operation.
+// GetAPI - Get a Specific API by ID
 // You can define a custom result to unmarshal the response into.
 // GET /apis/{id}
 func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
@@ -133,13 +133,13 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 	}
 }
 
-// ListApis defines an operation.
+// ListApis - List APIs with Parameters
 // GET /apis
 func (c *Client) ListApis(ctx context.Context, params *ListApisParams) (APIInfos, error) {
 	return ListApis[APIInfos](ctx, c, params)
 }
 
-// ListApis defines an operation.
+// ListApis - List APIs with Parameters
 // You can define a custom result to unmarshal the response into.
 // GET /apis
 func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R, error) {
