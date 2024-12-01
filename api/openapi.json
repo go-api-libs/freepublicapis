@@ -13,6 +13,7 @@
   "paths": {
     "/random": {
       "get": {
+        "summary": "Get a Random API",
         "operationId": "GetRandom",
         "responses": {
           "200": {
@@ -28,6 +29,7 @@
         }
       ],
       "get": {
+        "summary": "Get a Specific API by ID",
         "operationId": "GetAPI",
         "responses": {
           "200": {
@@ -49,6 +51,7 @@
         }
       ],
       "get": {
+        "summary": "List APIs with Parameters",
         "operationId": "ListApis",
         "responses": {
           "200": {
