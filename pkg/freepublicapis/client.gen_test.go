@@ -7,14 +7,14 @@ package freepublicapis_test
 import (
 	"context"
 	"errors"
-	freepublicapis "freepublicapis"
+	freepublicapis1 "freepublicapis"
 	"io"
 	"net/http"
 	"strings"
 	"testing"
 
 	"github.com/go-api-libs/api"
-	freepublicapis1 "github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
+	"github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
 	"gopkg.in/dnaeon/go-vcr.v3/recorder"
 )
 
@@ -51,7 +51,7 @@ func TestClient_Error(t *testing.T) {
 			t.Fatalf("want: %v, got: %v", testErr, err)
 		}
 
-		if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
+		if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 			Limit: 10,
 			Sort:  "best",
 		}); err == nil {
@@ -140,7 +140,7 @@ func TestClient_Error(t *testing.T) {
 			// unknown status code
 			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{StatusCode: http.StatusTeapot}}
 
-			if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
+			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 				Limit: 10,
 				Sort:  "best",
 			}); err == nil {
@@ -155,7 +155,7 @@ func TestClient_Error(t *testing.T) {
 				StatusCode: http.StatusOK,
 			}}
 
-			if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
+			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 				Limit: 10,
 				Sort:  "best",
 			}); err == nil {
@@ -171,7 +171,7 @@ func TestClient_Error(t *testing.T) {
 				StatusCode: http.StatusOK,
 			}}
 
-			if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
+			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 				Limit: 10,
 				Sort:  "best",
 			}); err == nil {
@@ -205,7 +205,7 @@ func replay(t *testing.T, cassette string) {
 func TestClient_VCR(t *testing.T) {
 	ctx := context.Background()
 
-	c, err := freepublicapis.NewClient()
+	c, err := freepublicapis1.NewClient()
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -249,7 +249,7 @@ func TestClient_VCR(t *testing.T) {
 		}
 
 		{
-			res, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
+			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
 				Limit: 350,
 				Sort:  "best",
 			})
