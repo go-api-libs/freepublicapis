@@ -7,13 +7,14 @@ package freepublicapis_test
 import (
 	"context"
 	"errors"
+	freepublicapis "freepublicapis"
 	"io"
 	"net/http"
 	"strings"
 	"testing"
 
 	"github.com/go-api-libs/api"
-	"github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
+	freepublicapis1 "github.com/go-api-libs/freepublicapis/pkg/freepublicapis"
 	"gopkg.in/dnaeon/go-vcr.v3/recorder"
 )
 
@@ -50,7 +51,7 @@ func TestClient_Error(t *testing.T) {
 			t.Fatalf("want: %v, got: %v", testErr, err)
 		}
 
-		if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+		if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
 			Limit: 10,
 			Sort:  "best",
 		}); err == nil {
@@ -139,7 +140,7 @@ func TestClient_Error(t *testing.T) {
 			// unknown status code
 			http.DefaultClient.Transport = &testRoundTripper{rsp: &http.Response{StatusCode: http.StatusTeapot}}
 
-			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+			if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
 				Limit: 10,
 				Sort:  "best",
 			}); err == nil {
@@ -154,7 +155,7 @@ func TestClient_Error(t *testing.T) {
 				StatusCode: http.StatusOK,
 			}}
 
-			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+			if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
 				Limit: 10,
 				Sort:  "best",
 			}); err == nil {
@@ -170,7 +171,7 @@ func TestClient_Error(t *testing.T) {
 				StatusCode: http.StatusOK,
 			}}
 
-			if _, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+			if _, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
 				Limit: 10,
 				Sort:  "best",
 			}); err == nil {
@@ -248,7 +249,7 @@ func TestClient_VCR(t *testing.T) {
 		}
 
 		{
-			res, err := c.ListApis(ctx, &freepublicapis.ListApisParams{
+			res, err := c.ListApis(ctx, &freepublicapis1.ListApisParams{
 				Limit: 350,
 				Sort:  "best",
 			})
