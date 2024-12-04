@@ -23,6 +23,7 @@ var (
 	}
 
 	jsonOpts = json.JoinOptions(
+		json.RejectUnknownMembers(true),
 		json.WithMarshalers(json.MarshalFuncV2(jsonutil.URLMarshal)),
 		json.WithUnmarshalers(json.UnmarshalFuncV2(jsonutil.URLUnmarshal)))
 )
