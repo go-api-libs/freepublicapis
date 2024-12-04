@@ -7,7 +7,6 @@ package freepublicapis_test
 import (
 	"context"
 	"errors"
-	freepublicapis1 "freepublicapis"
 	"io"
 	"net/http"
 	"strings"
@@ -205,7 +204,7 @@ func replay(t *testing.T, cassette string) {
 func TestClient_VCR(t *testing.T) {
 	ctx := context.Background()
 
-	c, err := freepublicapis1.NewClient()
+	c, err := freepublicapis.NewClient()
 	if err != nil {
 		t.Fatal(err)
 	}
