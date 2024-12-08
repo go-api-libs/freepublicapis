@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Free Public APIs API",
-    "description": "FreePublicAPIs now has a free public API! The Free Public APIs API provides up-to-date information on every free public API listed on freepublicapis.com. Perfect for developers, students and hobbyists. It is limited to 1000 requests a day, if you need more, feel free to reach out. Also if you build something with this API, make sure to add it as a showcase project here.",
+    "description": "FreePublicAPIs now has a free public API! The Free Public APIs API provides up-to-date information on every free public API listed on freepublicapis. com. Perfect for developers, students and hobbyists. It is limited to 1000 requests a day, if you need more, feel free to reach out. Also if you build something with this API, make sure to add it as a showcase project here.",
     "version": "1.0.0"
   },
   "servers": [
