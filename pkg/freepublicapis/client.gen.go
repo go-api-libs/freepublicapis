@@ -9,10 +9,15 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
+	"strings"
 
 	"github.com/MarkRosemaker/jsonutil"
 	"github.com/go-api-libs/api"
 	"github.com/go-json-experiment/json"
+)
+
+const (
+	userAgent = "FreepublicapisGoAPILibrary/1.0.0 (https://github.com/go-api-libs/freepublicapis)"
 )
 
 var (
@@ -53,7 +58,7 @@ func (c *Client) GetRandom(ctx context.Context) (*SimpleAPIInfo, error) {
 func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 	u := baseURL.JoinPath("/random")
 	req := (&http.Request{
-		Header:     http.Header{},
+		Header:     http.Header{"User-Agent": []string{userAgent}},
 		Host:       u.Host,
 		Method:     http.MethodGet,
 		Proto:      "HTTP/1.1",
@@ -71,7 +76,7 @@ func GetRandom[R any](ctx context.Context, c *Client) (*R, error) {
 	switch rsp.StatusCode {
 	case http.StatusOK:
 		// Returns simple information about a single API
-		switch rsp.Header.Get("Content-Type") {
+		switch mt, _, _ := strings.Cut(rsp.Header.Get("Content-Type"), ";"); mt {
 		case "application/json":
 			var out R
 			if err := json.UnmarshalRead(rsp.Body, &out, jsonOpts); err != nil {
@@ -101,7 +106,7 @@ func (c *Client) GetAPI(ctx context.Context, id int) (*SimpleAPIInfo, error) {
 func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 	u := baseURL.JoinPath("apis", strconv.Itoa(id))
 	req := (&http.Request{
-		Header:     http.Header{},
+		Header:     http.Header{"User-Agent": []string{userAgent}},
 		Host:       u.Host,
 		Method:     http.MethodGet,
 		Proto:      "HTTP/1.1",
@@ -119,7 +124,7 @@ func GetAPI[R any](ctx context.Context, c *Client, id int) (*R, error) {
 	switch rsp.StatusCode {
 	case http.StatusOK:
 		// Returns simple information about a single API
-		switch rsp.Header.Get("Content-Type") {
+		switch mt, _, _ := strings.Cut(rsp.Header.Get("Content-Type"), ";"); mt {
 		case "application/json":
 			var out R
 			if err := json.UnmarshalRead(rsp.Body, &out, jsonOpts); err != nil {
@@ -167,7 +172,7 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R,
 	}
 
 	req := (&http.Request{
-		Header:     http.Header{},
+		Header:     http.Header{"User-Agent": []string{userAgent}},
 		Host:       u.Host,
 		Method:     http.MethodGet,
 		Proto:      "HTTP/1.1",
@@ -186,7 +191,7 @@ func ListApis[R any](ctx context.Context, c *Client, params *ListApisParams) (R,
 	switch rsp.StatusCode {
 	case http.StatusOK:
 		// Returns a list of API information
-		switch rsp.Header.Get("Content-Type") {
+		switch mt, _, _ := strings.Cut(rsp.Header.Get("Content-Type"), ";"); mt {
 		case "application/json":
 			if err := json.UnmarshalRead(rsp.Body, &out, jsonOpts); err != nil {
 				return out, api.WrapDecodingError(rsp, err)

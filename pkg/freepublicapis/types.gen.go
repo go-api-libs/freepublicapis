@@ -25,14 +25,14 @@ const (
 
 // SimpleAPIInfo defines a model
 type SimpleAPIInfo struct {
-	ID            int     `json:"id"`
-	Emoji         string  `json:"emoji"`
-	Title         string  `json:"title"`
-	Description   string  `json:"description"`
-	Documentation url.URL `json:"documentation"`
-	Methods       int     `json:"methods"`
-	Health        int     `json:"health"`
-	Source        url.URL `json:"source"`
+	ID            int     `json:"id,omitzero"`
+	Emoji         string  `json:"emoji,omitzero"`
+	Title         string  `json:"title,omitzero"`
+	Description   string  `json:"description,omitzero"`
+	Documentation url.URL `json:"documentation,omitzero"`
+	Methods       int     `json:"methods,omitzero"`
+	Health        int     `json:"health,omitzero"`
+	Source        url.URL `json:"source,omitzero"`
 }
 
 // APIInfos defines a model
@@ -40,16 +40,16 @@ type APIInfos []APIInfo
 
 // APIInfo defines a model
 type APIInfo struct {
-	ID             int     `json:"id"`
-	Emoji          string  `json:"emoji"`
-	Title          string  `json:"title"`
-	Description    string  `json:"description"`
-	Documentation  url.URL `json:"documentation"`
-	Methods        int     `json:"methods"`
-	Health         int     `json:"health"`
-	Popularity     int     `json:"popularity"`
-	AvgReliability int     `json:"avg_reliability"`
-	AvgError       int     `json:"avg_error"`
-	AvgLatency     int     `json:"avg_latency"`
-	Source         url.URL `json:"source"`
+	ID             int     `json:"id,omitzero"`
+	Emoji          string  `json:"emoji,omitzero"`
+	Title          string  `json:"title,omitzero"`
+	Description    string  `json:"description,omitzero"`
+	Documentation  url.URL `json:"documentation,omitzero"`
+	Methods        int     `json:"methods,omitzero"`
+	Health         int     `json:"health,omitzero"`
+	Popularity     int     `json:"popularity,omitzero"`
+	AvgReliability int     `json:"avg_reliability,omitzero"`
+	AvgError       int     `json:"avg_error,omitzero"`
+	AvgLatency     int     `json:"avg_latency,omitzero"`
+	Source         url.URL `json:"source,omitzero"`
 }
