@@ -246,7 +246,7 @@
       "InternalServerErrorResponse": {
         "description": "The server can't serve the request due to an error",
         "content": {
-          "text/plain; charset=utf-8": {
+          "text/plain": {
             "example": "Internal Server Error"
           }
         }
