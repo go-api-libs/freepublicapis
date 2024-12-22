@@ -262,7 +262,7 @@ func TestClient_VCR(t *testing.T) {
 	}
 
 	t.Run("2024-11-30", func(t *testing.T) {
-		replay(t, "../../pkg/freepublicapis/vcr/2024-11-30")
+		replay(t, "vcr/2024-11-30")
 
 		{
 			res, err := c.GetRandom(ctx)
