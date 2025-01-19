@@ -1,9 +1,9 @@
-github.com/MarkRosemaker/jsonutil v0.0.0-20241121165235-080e83f11d35 h1:OjSgsfhRilbDgbvsynw7c2foZ3W8v1rlR2EaAWFMU9I=
-github.com/MarkRosemaker/jsonutil v0.0.0-20241121165235-080e83f11d35/go.mod h1:K66rodY4xSRyahsUu9Ekx5DWqY7tYbBG3XAAgahnGN0=
-github.com/go-api-libs/api v0.0.0-20241130015416-83da383db809 h1:EEcHrfS01TLTWkG+uf8HKIQL+zYu/h7cxFKEK2c/eNY=
-github.com/go-api-libs/api v0.0.0-20241130015416-83da383db809/go.mod h1:fL72+M3mBE+eqDE13m+RakrxI4QdIcd44+onfW0SfPw=
-github.com/go-json-experiment/json v0.0.0-20241121013241-b5f849ce0b59 h1:Qh+gCQdco4UY89X3zmlsYOz6OGlOg6XeEwUJi6lHAU0=
-github.com/go-json-experiment/json v0.0.0-20241121013241-b5f849ce0b59/go.mod h1:BWmvoE1Xia34f3l/ibJweyhrT+aROb/FQ6d+37F0e2s=
+github.com/MarkRosemaker/jsonutil v0.0.0-20250114201208-e81a63afd92c h1:udz3xOyJEKZHFzuHqpNnj8Z+tmSZ6BsjrF8YQAJrxAE=
+github.com/MarkRosemaker/jsonutil v0.0.0-20250114201208-e81a63afd92c/go.mod h1:oADYyP2jHXwC80qZwZaRr+3rIBnVNepyGzx/apEx67w=
+github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9 h1:dUnqp3lZGZs7oDymwbbUibRTSnuugiqqYaMhS3PMnlw=
+github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9/go.mod h1:fL72+M3mBE+eqDE13m+RakrxI4QdIcd44+onfW0SfPw=
+github.com/go-json-experiment/json v0.0.0-20250119165339-d96285104214 h1:1dlB1X7A6QDvLxtJmzIEdtHTlWFrkfxrlRyb7VjZqQc=
+github.com/go-json-experiment/json v0.0.0-20250119165339-d96285104214/go.mod h1:BWmvoE1Xia34f3l/ibJweyhrT+aROb/FQ6d+37F0e2s=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/dnaeon/go-vcr.v3 v3.2.0 h1:Rltp0Vf+Aq0u4rQXgmXgtgoRDStTnFN83cWgSGSoRzM=

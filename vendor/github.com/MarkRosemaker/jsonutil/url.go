@@ -9,7 +9,7 @@ import (
 )
 
 // URLMarshal is a custom marshaler for URL values, marshaling them as strings.
-func URLMarshal(enc *jsontext.Encoder, u *url.URL, opts json.Options) error {
+func URLMarshal(enc *jsontext.Encoder, u url.URL, opts json.Options) error {
 	return enc.WriteToken(jsontext.String(u.String()))
 }
 

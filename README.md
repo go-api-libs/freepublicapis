@@ -101,7 +101,7 @@ func main() {
 		panic(err)
 	}
 
-	// Use apiInfos array
+	// Use apiInfos slice
 }
 
 ```

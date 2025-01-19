@@ -25,6 +25,8 @@ type Error struct {
 	Response *http.Response
 	// The underlying error.
 	Err error
+	// Indicates that this is a custom error returned by the API.
+	IsCustom bool
 }
 
 func NewErrUnknownStatusCode(rsp *http.Response) error {
@@ -77,4 +79,11 @@ func (d DecodingError) Error() string {
 // Use errors.As to check if the error returned by an API library is a DecodingError.
 func WrapDecodingError(rsp *http.Response, err error) error {
 	return &Error{Response: rsp, Err: &DecodingError{Err: err}}
+}
+
+// NewErrCustom wraps a custom error in an api.Error.
+// Use this if the status code is unsuccessful and the API returns more information,
+// e.g. as part of a JSON that can be parsed and transformed into an error.
+func NewErrCustom(rsp *http.Response, err error) error {
+	return &Error{Response: rsp, Err: err, IsCustom: true}
 }
