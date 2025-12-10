@@ -1,9 +1,7 @@
-github.com/MarkRosemaker/jsonutil v0.0.0-20250114201208-e81a63afd92c h1:udz3xOyJEKZHFzuHqpNnj8Z+tmSZ6BsjrF8YQAJrxAE=
-github.com/MarkRosemaker/jsonutil v0.0.0-20250114201208-e81a63afd92c/go.mod h1:oADYyP2jHXwC80qZwZaRr+3rIBnVNepyGzx/apEx67w=
+github.com/MarkRosemaker/jsonutil v0.0.0-20251208205702-a8b03148ea3a h1:rcw/QH8Xm1lrzCB5tWqd0imrSb/24hwlW4tiWHf4XWU=
+github.com/MarkRosemaker/jsonutil v0.0.0-20251208205702-a8b03148ea3a/go.mod h1:hVhD9jDm0I/16Y7wIhFe1nQpqqhUFCe76DEI6Kgg9I0=
 github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9 h1:dUnqp3lZGZs7oDymwbbUibRTSnuugiqqYaMhS3PMnlw=
 github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9/go.mod h1:fL72+M3mBE+eqDE13m+RakrxI4QdIcd44+onfW0SfPw=
-github.com/go-json-experiment/json v0.0.0-20250119165339-d96285104214 h1:1dlB1X7A6QDvLxtJmzIEdtHTlWFrkfxrlRyb7VjZqQc=
-github.com/go-json-experiment/json v0.0.0-20250119165339-d96285104214/go.mod h1:BWmvoE1Xia34f3l/ibJweyhrT+aROb/FQ6d+37F0e2s=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/dnaeon/go-vcr.v3 v3.2.0 h1:Rltp0Vf+Aq0u4rQXgmXgtgoRDStTnFN83cWgSGSoRzM=

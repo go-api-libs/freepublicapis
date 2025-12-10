@@ -6,6 +6,7 @@ package freepublicapis
 
 import (
 	"context"
+	"encoding/json/v2"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -13,7 +14,6 @@ import (
 
 	"github.com/MarkRosemaker/jsonutil"
 	"github.com/go-api-libs/api"
-	"github.com/go-json-experiment/json"
 )
 
 const (
