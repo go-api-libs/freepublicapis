@@ -1,7 +1,11 @@
-github.com/MarkRosemaker/jsonutil v0.0.0-20251208205702-a8b03148ea3a h1:rcw/QH8Xm1lrzCB5tWqd0imrSb/24hwlW4tiWHf4XWU=
-github.com/MarkRosemaker/jsonutil v0.0.0-20251208205702-a8b03148ea3a/go.mod h1:hVhD9jDm0I/16Y7wIhFe1nQpqqhUFCe76DEI6Kgg9I0=
+cloud.google.com/go v0.123.0 h1:2NAUJwPR47q+E35uaJeYoNhuNEM9kM8SjgRgdeOJUSE=
+cloud.google.com/go v0.123.0/go.mod h1:xBoMV08QcqUGuPW65Qfm1o9Y4zKZBpGS+7bImXLTAZU=
+github.com/MarkRosemaker/jsonutil v0.0.0-20260820212410-12ba6685df41 h1:n0xGbgl7rFFjta0XFjyDcm5kx3xatajWGGqTa5nyhnc=
+github.com/MarkRosemaker/jsonutil v0.0.0-20260820212410-12ba6685df41/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
 github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9 h1:dUnqp3lZGZs7oDymwbbUibRTSnuugiqqYaMhS3PMnlw=
 github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9/go.mod h1:fL72+M3mBE+eqDE13m+RakrxI4QdIcd44+onfW0SfPw=
+github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
+github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/dnaeon/go-vcr.v3 v3.2.0 h1:Rltp0Vf+Aq0u4rQXgmXgtgoRDStTnFN83cWgSGSoRzM=

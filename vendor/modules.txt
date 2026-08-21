@@ -1,5 +1,8 @@
-# github.com/MarkRosemaker/jsonutil v0.0.0-20251208205702-a8b03148ea3a
-## explicit; go 1.24
+# cloud.google.com/go v0.123.0
+## explicit; go 1.24.0
+cloud.google.com/go/civil
+# github.com/MarkRosemaker/jsonutil v0.0.0-20260820212410-12ba6685df41
+## explicit; go 1.27
 github.com/MarkRosemaker/jsonutil
 # github.com/go-api-libs/api v0.0.0-20241220213325-f2e74c88e4c9
 ## explicit; go 1.23.2
