@@ -1,0 +1,22 @@
+{
+	"description": "Provides custom JSON v2 marshaling and unmarshaling functions for specific data types, e.g. JSON encoding and decoding for types like time.Duration and url.URL.",
+	"topics": [
+		"golang",
+		"json",
+		"json-v2",
+		"marshal",
+		"marshaller",
+		"time-duration",
+		"unmarshal",
+		"unmarshaller",
+		"url"
+	],
+	"coverage": 80.9,
+	"devtoolVersion": "v0.0.0-20261109115913-ce9cce1b6b47",
+	"kind": "library",
+	"tools": {
+		"golangci-lint": "v2.15.0",
+		"govulncheck": "v1.9.0",
+		"pkgsite": "v0.6.0"
+	}
+}
