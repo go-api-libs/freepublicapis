@@ -1,0 +1,20 @@
+{
+	"description": "Record HTTP calls as JSON cassettes and replay them: an http.RoundTripper to mock any Go HTTP client in tests, record real traffic, and check calls strictly, with credentials masked before anything is written.",
+	"topics": [
+		"cassette",
+		"go",
+		"http",
+		"mock",
+		"record-replay",
+		"testing",
+		"vcr"
+	],
+	"coverage": 85.8,
+	"devtoolVersion": "v0.0.0-20261109115913-ce9cce1b6b47",
+	"kind": "library",
+	"tools": {
+		"golangci-lint": "v2.15.0",
+		"govulncheck": "v1.9.0",
+		"pkgsite": "v0.6.0"
+	}
+}
