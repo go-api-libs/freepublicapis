@@ -1,7 +1,7 @@
 cloud.google.com/go v0.123.0 h1:2NAUJwPR47q+E35uaJeYoNhuNEM9kM8SjgRgdeOJUSE=
 cloud.google.com/go v0.123.0/go.mod h1:xBoMV08QcqUGuPW65Qfm1o9Y4zKZBpGS+7bImXLTAZU=
-github.com/MarkRosemaker/jsonutil v0.0.0-20261109120454-26f22c55639c h1:Q2xr91dMSLMVvRPzjULO2BMdZdgJFN81fuT0Co9EKa4=
-github.com/MarkRosemaker/jsonutil v0.0.0-20261109120454-26f22c55639c/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
+github.com/MarkRosemaker/jsonutil v0.0.0-20261111023756-6c211037c3df h1:QW9Qk8hzepXUy+ctR64dqGxExZ2KlWijT12vKN0Ifxo=
+github.com/MarkRosemaker/jsonutil v0.0.0-20261111023756-6c211037c3df/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
 github.com/go-api-libs/api v0.0.0-20261109120454-35fbf0e61179 h1:a8GiKDDKhj/koLrKL0ca9ZGPUIz2l2qXaox+lnj8TC0=
 github.com/go-api-libs/api v0.0.0-20261109120454-35fbf0e61179/go.mod h1:PhJdxE2I04u1TN3QSaTGh4oe/AhrWb50CcfmmjNx1ns=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
