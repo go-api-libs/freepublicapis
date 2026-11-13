@@ -4,7 +4,7 @@ go 1.27
 
 require (
 	github.com/MarkRosemaker/jsonutil v0.0.0-20261111155129-3eb35e1f56f9
-	github.com/go-api-libs/api v0.0.0-20261112202218-afda1db7f6c6
+	github.com/go-api-libs/api v0.0.0-20261113130130-277524695333
 	gopkg.in/dnaeon/go-vcr.v3 v3.2.0
 )
 
