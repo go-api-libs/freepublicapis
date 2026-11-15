@@ -15,6 +15,13 @@ It is utilized by all API libraries within the [go-api-libs](https://github.com/
 - **Status Code Handling**: Handle and identify errors based on HTTP status codes.
 - **Content Type Handling**: Handle errors based on content type mismatches.
 
+For the code openapi-codegen generates, it also holds:
+
+- **`union`**: decoding and encoding unions and tagged structs.
+- **`apitest`**: replaying recorded interactions in generated tests.
+- **`paging`**: `paging.Pages` and `paging.Items` yield what an API lists a page at a time, fetching each page as the one
+  before is used up, and stopping when the loop breaks or at the first error.
+
 ## Usage
 
 To install the library, run:
