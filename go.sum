@@ -4,8 +4,8 @@ github.com/MarkRosemaker/cassette v0.0.0-20261115155508-a6d233bba59a h1:tRduZM76
 github.com/MarkRosemaker/cassette v0.0.0-20261115155508-a6d233bba59a/go.mod h1:HO8DUAyjB202aT3azicV8Y4JKc3SrYEK1byKWu2Xo4U=
 github.com/MarkRosemaker/jsonutil v0.0.0-20261115155443-1ff2055c9f09 h1:1/0Sk/HvxbNkeludkYrvAPVAT3b/wjp452P1n7uELnw=
 github.com/MarkRosemaker/jsonutil v0.0.0-20261115155443-1ff2055c9f09/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
-github.com/go-api-libs/api v0.0.0-20261115172114-130f6fc73195 h1:+QFVvV0eav8ZKBJiyJhjkp46SkuRg8C+RVUvm/D4/MQ=
-github.com/go-api-libs/api v0.0.0-20261115172114-130f6fc73195/go.mod h1:4Ls/f+97MK0jpUbKa713C/itwrFlVvHwxt+CWLXdsr0=
+github.com/go-api-libs/api v0.0.0-20261115203444-031bfead3b3f h1:FQH9Wv+cVeWc6znpeb2WP6k2r0b7g4NuoLnkxyW6SB0=
+github.com/go-api-libs/api v0.0.0-20261115203444-031bfead3b3f/go.mod h1:4Ls/f+97MK0jpUbKa713C/itwrFlVvHwxt+CWLXdsr0=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=

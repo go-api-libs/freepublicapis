@@ -7,7 +7,7 @@ github.com/MarkRosemaker/cassette
 # github.com/MarkRosemaker/jsonutil v0.0.0-20261115155443-1ff2055c9f09
 ## explicit; go 1.27
 github.com/MarkRosemaker/jsonutil
-# github.com/go-api-libs/api v0.0.0-20261115172114-130f6fc73195
+# github.com/go-api-libs/api v0.0.0-20261115203444-031bfead3b3f
 ## explicit; go 1.27
 github.com/go-api-libs/api
 # gopkg.in/dnaeon/go-vcr.v3 v3.2.0
