@@ -9,8 +9,8 @@
 		"testing",
 		"vcr"
 	],
-	"coverage": 86.2,
-	"devtoolVersion": "v0.0.0-20261124050723-bc755a295af0",
+	"coverage": 86.4,
+	"devtoolVersion": "v0.0.0-20261124110702-861a2ba67e28",
 	"kind": "library",
 	"tools": {
 		"golangci-lint": "v2.15.0",
