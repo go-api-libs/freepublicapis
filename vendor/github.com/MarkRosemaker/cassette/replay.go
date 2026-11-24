@@ -226,8 +226,8 @@ func MatchRequest(opts ...MatchOption) Matcher {
 }
 
 // CompareHeaders makes [MatchRequest] compare headers too, all but those named, exactly. Authorization is compared
-// by its scheme alone, since a recording masks the credential after it, and a Content-Type recorded without a body
-// is left out: it says nothing of a request that has none.
+// by its scheme alone, since a recording masks the credential after it, a header recorded masked matches any value
+// sent, and a Content-Type recorded without a body is left out: it says nothing of a request that has none.
 func CompareHeaders(ignore ...string) MatchOption {
 	return func(m *matcher) {
 		m.headers = true
@@ -305,9 +305,22 @@ func (m *matcher) matchHeaders(req *http.Request, got http.Header, rec Request) 
 	got.Del("Authorization")
 	want.Del("Authorization")
 
+	// a recording masks a credential, keeping only its length, so any credential sent in its place matches it
+	for name, vals := range want {
+		if len(got[name]) == len(vals) && !slices.ContainsFunc(vals, isNotMasked) {
+			got.Del(name)
+			want.Del(name)
+		}
+	}
+
 	if !maps.EqualFunc(got, want, slices.Equal) {
 		return fmt.Errorf("got headers %v, want %v", got, want)
 	}
 
 	return nil
+}
+
+// isNotMasked reports whether s is anything but a masked value: one or more asterisks.
+func isNotMasked(s string) bool {
+	return strings.Trim(s, "*") != "" || s == ""
 }

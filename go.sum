@@ -1,11 +1,11 @@
 cloud.google.com/go v0.123.0 h1:2NAUJwPR47q+E35uaJeYoNhuNEM9kM8SjgRgdeOJUSE=
 cloud.google.com/go v0.123.0/go.mod h1:xBoMV08QcqUGuPW65Qfm1o9Y4zKZBpGS+7bImXLTAZU=
-github.com/MarkRosemaker/cassette v0.0.0-20261124110309-32c9c69cd6ad h1:FY/4ykxQUytHWBr+cSlFE9L7l0EstPm69QbbKvXWWRc=
-github.com/MarkRosemaker/cassette v0.0.0-20261124110309-32c9c69cd6ad/go.mod h1:mIy1SlNqKDRALYBqZGjj+MWPU9dASkyP1d1X+I1HP6k=
+github.com/MarkRosemaker/cassette v0.0.0-20261124134158-2243379a46d0 h1:6Xeo1ZPgwdYSMcBCOhDYZWoYzQROxTuxDd5erqoWUN4=
+github.com/MarkRosemaker/cassette v0.0.0-20261124134158-2243379a46d0/go.mod h1:mIy1SlNqKDRALYBqZGjj+MWPU9dASkyP1d1X+I1HP6k=
 github.com/MarkRosemaker/jsonutil v0.0.0-20261118230255-4b04cfc02484 h1:mWQovC60M6QVWXpitDiB2bwT+Jr8uQH2eyjOcUE2EcI=
 github.com/MarkRosemaker/jsonutil v0.0.0-20261118230255-4b04cfc02484/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
-github.com/go-api-libs/api v0.0.0-20261124110349-399c57411dab h1:3URVH0EBWS3msBaY4DksbXaMdgOzCOQ3BaASekQcMvI=
-github.com/go-api-libs/api v0.0.0-20261124110349-399c57411dab/go.mod h1:hsT4EQTqMYg0N1P7/StfOYihcxqabwnPQRFvG6bv1ag=
+github.com/go-api-libs/api v0.0.0-20261124152152-2e43d1b80b9c h1:6hhisl0lBbgF4hKZNBwtEnbxf/qLC58ew5V9XOrnwoI=
+github.com/go-api-libs/api v0.0.0-20261124152152-2e43d1b80b9c/go.mod h1:lu3xN+CI1FUhTpnyVFvtsQYNkZ3KGxpPlY61j6RA1d4=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
