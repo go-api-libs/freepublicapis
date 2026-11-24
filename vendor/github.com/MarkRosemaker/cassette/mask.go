@@ -89,7 +89,9 @@ func (m masker) rules() rules {
 }
 
 // defaultMasker returns the configuration used by [Interactions.Mask]: the
-// headers and body keys that carry credentials in most APIs.
+// headers and body keys that carry credentials in most APIs. Besides these, a
+// header whose name ends in a word such as Token or Key is masked too, see
+// [credentialHeader].
 //
 // It knows nothing about which identifiers are yours. A recording that carries
 // an account ID under a generic key such as "id" needs that key listed in
@@ -120,6 +122,36 @@ func defaultMasker() masker {
 	}
 }
 
+// MaskOption makes [AddInteraction] or [Interaction.Mask] redact more than they always do.
+type MaskOption func(*masker)
+
+// MaskHeaders makes [AddInteraction] or [Interaction.Mask] redact the values of the headers named, in requests and responses alike, as one
+// an API names to carry its key, such as X-Finnhub-Token. Matching is case-insensitive.
+func MaskHeaders(names ...string) MaskOption {
+	return func(m *masker) { m.HeaderKeys = append(m.HeaderKeys, names...) }
+}
+
+// MaskKeys makes [AddInteraction] or [Interaction.Mask] redact the values of the query parameters and body members named, as a query
+// parameter an API names to carry its key. Matching is case-insensitive.
+func MaskKeys(names ...string) MaskOption {
+	return func(m *masker) { m.BodyKeys = append(m.BodyKeys, names...) }
+}
+
+// credentialWords are the last words of a header's name that say it carries a credential, as X-Finnhub-Token or
+// X-Goog-Api-Key do: such a header is masked whatever an API calls it.
+var credentialWords = map[string]bool{
+	"token": true, "key": true, "apikey": true, "secret": true,
+	"password": true, "passwd": true, "auth": true, "signature": true,
+}
+
+// credentialHeader reports whether the header's name ends in a word that says it carries a credential. Query
+// parameters are left to the keys a masker lists, since a name such as page_token is a cursor a replay must match.
+func credentialHeader(name string) bool {
+	words := strings.FieldsFunc(strings.ToLower(name), func(r rune) bool { return r == '-' || r == '_' || r == '.' })
+
+	return len(words) > 0 && credentialWords[words[len(words)-1]]
+}
+
 // rules is the compiled form of a [masker]: key sets rather than slices.
 type rules struct {
 	headers, keys, ids, names, usernames map[string]bool
@@ -140,6 +172,17 @@ func (ia *Interaction) maskWith(m masker) {
 
 // Mask redacts credentials in place: in headers, in bodies and in query values.
 func (ias Interactions) Mask() { ias.maskWith(defaultMasker()) }
+
+// Mask redacts credentials in ia in place, as [Interactions.Mask] does, and what opts name besides: a client masks the
+// call it records as soon as it records it, so that whatever writes it later, and however, never writes its key.
+func (ia *Interaction) Mask(opts ...MaskOption) {
+	m := defaultMasker()
+	for _, opt := range opts {
+		opt(&m)
+	}
+
+	ia.maskWith(m)
+}
 
 // maskWith redacts sensitive values in place according to m.
 func (ias Interactions) maskWith(m masker) {
@@ -170,7 +213,7 @@ func lowerSet(keys []string) map[string]bool {
 
 func maskHeaders(h map[string][]string, keys map[string]bool) {
 	for k, vals := range h {
-		if !keys[strings.ToLower(k)] {
+		if !keys[strings.ToLower(k)] && !credentialHeader(k) {
 			continue
 		}
 

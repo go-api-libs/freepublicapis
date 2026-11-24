@@ -64,14 +64,14 @@ func (ias Interactions) MarshalWrite(w io.Writer) error {
 
 var mu sync.Mutex
 
-// AddInteraction adds ia to the interactions in the file at path, masked as [Interactions.Mask] does and with its bodies trimmed as
-// [Interactions.TrimBodies] does with [MaxStringLen], writing the file right away; ia is left as it is. A call the
-// file holds already, the same request answered with the same status and body, is not added again: a client retrying
-// a call, or polling one, records it once.
-func AddInteraction(path string, ia *Interaction) error {
+// AddInteraction adds ia to the interactions in the file at path, masked as [Interactions.Mask] does, and as opts say
+// besides, and with its bodies trimmed as [Interactions.TrimBodies] does with [MaxStringLen], writing the file right
+// away; ia is left as it is. A call the file holds already, the same request answered with the same status and body, is
+// not added again: a client retrying a call, or polling one, records it once.
+func AddInteraction(path string, ia *Interaction, opts ...MaskOption) error {
 	ia = ia.clone()
 	ia.trimBodies(MaxStringLen)
-	ia.maskWith(defaultMasker())
+	ia.Mask(opts...)
 
 	mu.Lock()
 	defer mu.Unlock()
