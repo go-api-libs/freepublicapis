@@ -209,6 +209,7 @@ type MatchOption func(*matcher)
 type matcher struct {
 	headers      bool
 	ignore       map[string]bool
+	optional     map[string]bool
 	optionalAuth func(*http.Request) bool
 }
 
@@ -244,6 +245,21 @@ func CompareHeaders(ignore ...string) MatchOption {
 // without.
 func OptionalAuthorization(optional func(*http.Request) bool) MatchOption {
 	return func(m *matcher) { m.optionalAuth = optional }
+}
+
+// OptionalHeaders makes [MatchRequest] match a recording without the headers named to a request that has them, and
+// compare them where the recording has them: a header a client has begun to send, such as Accept, is missing from what
+// was recorded before.
+func OptionalHeaders(names ...string) MatchOption {
+	return func(m *matcher) {
+		if m.optional == nil {
+			m.optional = map[string]bool{}
+		}
+
+		for _, name := range names {
+			m.optional[http.CanonicalHeaderKey(name)] = true
+		}
+	}
 }
 
 func (m *matcher) match(req *http.Request, rec Request) error {
@@ -300,6 +316,12 @@ func (m *matcher) matchHeaders(req *http.Request, got http.Header, rec Request) 
 	for name := range m.ignore {
 		got.Del(name)
 		want.Del(name)
+	}
+
+	for name := range m.optional {
+		if _, ok := want[name]; !ok {
+			got.Del(name)
+		}
 	}
 
 	got.Del("Authorization")
