@@ -1,11 +1,11 @@
 cloud.google.com/go v0.123.0 h1:2NAUJwPR47q+E35uaJeYoNhuNEM9kM8SjgRgdeOJUSE=
 cloud.google.com/go v0.123.0/go.mod h1:xBoMV08QcqUGuPW65Qfm1o9Y4zKZBpGS+7bImXLTAZU=
-github.com/MarkRosemaker/cassette v0.0.0-20261127155824-197919b5429c h1:scZtdwxriubEsjnLvsp/fA2FGqZoH2qAIDJIAtQCCHs=
-github.com/MarkRosemaker/cassette v0.0.0-20261127155824-197919b5429c/go.mod h1:oCcITFqJC4xCIsqCv/SJ8JAUZanwMrYMuR+IDM0C/50=
-github.com/MarkRosemaker/jsonutil v0.0.0-20261127154739-135cbaefd886 h1:ovpZLqguf85lCKBFLm7ni43zsAk9Wl2UpUxtxsp9Vj4=
-github.com/MarkRosemaker/jsonutil v0.0.0-20261127154739-135cbaefd886/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
-github.com/go-api-libs/api v0.0.0-20261127155855-e5b9ff99e44b h1:ZAEWkPH76uCfv4BjcyaaPb/ZKuOxgNAXP5Yuw0JXRQ8=
-github.com/go-api-libs/api v0.0.0-20261127155855-e5b9ff99e44b/go.mod h1:YjQ/t1nibdZ9gZYexj4WQkVouPtVpPVx7M0J8ASIjzw=
+github.com/MarkRosemaker/cassette v0.0.0-20261127170207-3afd4a75907a h1:lmw0xprVs/lS4Lp1ddSqn3wLbSTH24G3MQV5k8DeZ1M=
+github.com/MarkRosemaker/cassette v0.0.0-20261127170207-3afd4a75907a/go.mod h1:bdDNyz4mwSM3oL6uSmVEYFK0LQS+qZenvzx0vRev6+4=
+github.com/MarkRosemaker/jsonutil v0.0.0-20261127170131-4c1915dbe001 h1:l0v/NWqzGLyAl0D2P12BizNvRlmwAyyjv62aTN/PEEQ=
+github.com/MarkRosemaker/jsonutil v0.0.0-20261127170131-4c1915dbe001/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
+github.com/go-api-libs/api v0.0.0-20261127170236-f953c19a178c h1:jhImoLukSO3qzzl5WEvEgBBp/nI4G0wSJspLrYkR0ZY=
+github.com/go-api-libs/api v0.0.0-20261127170236-f953c19a178c/go.mod h1:Otu69ujRhaaphoTZnh5EJdRFemLs1f0LyO2MHUFf620=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
