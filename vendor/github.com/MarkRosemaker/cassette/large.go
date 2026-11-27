@@ -36,6 +36,13 @@ func IsText(contentType string) bool {
 	}
 }
 
+// isJSON reports whether contentType is a JSON media type. One that does not parse is not.
+func isJSON(contentType string) bool {
+	mt, _, err := mime.ParseMediaType(contentType)
+
+	return err == nil && (mt == "application/json" || strings.HasSuffix(mt, "+json") || strings.Contains(mt, "/json"))
+}
+
 // TrimBodies omits every recorded body that is not text, see [IsText], and cuts every JSON string in the others
 // longer than maxLen bytes, see [MaxStringLen].
 func (ias Interactions) TrimBodies(maxLen int) {

@@ -5,6 +5,7 @@ import (
 	"cmp"
 	"context"
 	"encoding/json/jsontext"
+	"encoding/json/v2"
 	"io"
 	"net/http"
 	"net/url"
@@ -152,6 +153,48 @@ func NewResponse(resp *http.Response) (Response, error) {
 
 // Body is a recorded body: written as the JSON it is, or as a string if it is no JSON.
 type Body []byte
+
+// UnmarshalJSONFrom implements [json.UnmarshalerFrom]: a body of text, such as XML or HTML, written as a JSON string
+// is read back as the text it is, as it was sent, not as the JSON string it was written as.
+func (r *Request) UnmarshalJSONFrom(dec *jsontext.Decoder) error {
+	type plain Request
+
+	if err := json.UnmarshalDecode(dec, (*plain)(r)); err != nil {
+		return err
+	}
+
+	r.Body = r.Body.asSent(r.Headers.Get("Content-Type"))
+
+	return nil
+}
+
+// UnmarshalJSONFrom implements [json.UnmarshalerFrom], reading a body of text as [Request.UnmarshalJSONFrom] does.
+func (rsp *Response) UnmarshalJSONFrom(dec *jsontext.Decoder) error {
+	type plain Response
+
+	if err := json.UnmarshalDecode(dec, (*plain)(rsp)); err != nil {
+		return err
+	}
+
+	rsp.Body = rsp.Body.asSent(rsp.Headers.Get("Content-Type"))
+
+	return nil
+}
+
+// asSent is b as it was sent with contentType: a JSON string, which is how a body of text other than JSON is written,
+// is the text it holds. A body of JSON, or of no content type said, is the JSON it is.
+func (b Body) asSent(contentType string) Body {
+	if contentType == "" || isJSON(contentType) || jsontext.Value(b).Kind() != '"' {
+		return b
+	}
+
+	text, err := jsontext.AppendUnquote(nil, []byte(b))
+	if err != nil {
+		return b
+	}
+
+	return text
+}
 
 // IsZero reports whether there is no body, which is left out when written: an empty JSON value, such as null or {},
 // is a body all the same.
