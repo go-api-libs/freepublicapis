@@ -1,13 +1,13 @@
 # cloud.google.com/go v0.123.0
 ## explicit; go 1.24.0
 cloud.google.com/go/civil
-# github.com/MarkRosemaker/cassette v0.0.0-20261126230209-577d7f661401
+# github.com/MarkRosemaker/cassette v0.0.0-20261127001959-2e9c977b04a7
 ## explicit; go 1.27
 github.com/MarkRosemaker/cassette
-# github.com/MarkRosemaker/jsonutil v0.0.0-20261126020829-395163231ad4
+# github.com/MarkRosemaker/jsonutil v0.0.0-20261127001933-b07dbcceebd6
 ## explicit; go 1.27
 github.com/MarkRosemaker/jsonutil
-# github.com/go-api-libs/api v0.0.0-20261126230233-f729199ffb88
+# github.com/go-api-libs/api v0.0.0-20261127002038-940062862e42
 ## explicit; go 1.27
 github.com/go-api-libs/api
 # gopkg.in/dnaeon/go-vcr.v3 v3.2.0
